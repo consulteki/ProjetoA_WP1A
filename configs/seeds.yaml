@@ -1,0 +1,18 @@
+# Sementes aleatórias do benchmark WP1A.
+#
+# Referência: docs/adr/ADR-003-reproducibility.md (REP-01).
+# Toda etapa estocástica (divisão de dados, inicialização de modelo,
+# validação cruzada) DEVE usar uma semente daqui — nunca uma semente
+# hardcoded em código ou deixada como padrão implícito da biblioteca.
+
+global_seed: 42
+
+per_stage:
+  split: 42        # usado por src/wp1a/splitting/ (SPEC-004)
+  model_init: 42    # usado por src/wp1a/models/ (SPEC-006)
+  cross_validation: 42
+
+# Sementes adicionais para repetições independentes exigidas por
+# docs/specs/SPEC-008-statistics.md (EST-01): múltiplas execuções
+# permitem calcular média, desvio-padrão e intervalo de confiança.
+replication_seeds: [42, 43, 44, 45, 46]

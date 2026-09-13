@@ -1,0 +1,41 @@
+# Caminhos canônicos do projeto WP1A.
+#
+# Todos os caminhos são relativos à raiz do repositório.
+# Referência: docs/specs/SPEC-000-master.md §11.3 (estrutura mínima do repositório).
+
+data:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  canonical_dataset_registry: data/processed/canonical_dataset_registry.json
+  split_manifest_dir: data/processed
+
+models:
+  dir: models
+
+results:
+  raw: results/raw
+  metrics: results/metrics
+  predictions: results/predictions
+  tables: results/tables
+  figures: results/figures
+  metadata: results/metadata
+
+reports:
+  audit: reports/audit
+  technical: reports/technical
+
+article:
+  manuscript: article/manuscript
+  figures: article/figures
+  tables: article/tables
+
+presentation: presentation
+
+docs:
+  project: docs/project
+  specs: docs/specs
+  adr: docs/adr
+  protocols: docs/protocols
+
+source_document: docs/project/WP1A_SOURCE.pdf

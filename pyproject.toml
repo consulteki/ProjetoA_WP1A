@@ -1,0 +1,53 @@
+[project]
+name = "wp1a-tep-benchmark"
+version = "0.1.0"
+description = "Benchmark reproduzível de métodos clássicos de aprendizado de máquina para diagnóstico de falhas no Tennessee Eastman Process (WP1A, MEI0028 — Modelagem e Simulação)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "See LICENSE" }
+authors = [
+    { name = "Grupo A — MEI0028, PUC Goiás" },
+]
+
+# Dependências do pipeline (a serem usadas pelas skills ainda não
+# implementadas — ver .agents/skills/). Fixe versões exatas em
+# requirements.txt no momento em que o pipeline for implementado
+# (docs/adr/ADR-003-reproducibility.md, REP-03).
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scikit-learn>=1.4",
+    "xgboost>=2.0",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "jupyter>=1.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# --- pytest -----------------------------------------------------------
+# Guardas metodológicos e testes de rejeição (ver AGENTS.md TEST-R01..R08,
+# tests/README.md). Nenhuma implementação de pipeline é aceita sem que
+# esta suíte continue passando.
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+# Este projeto não usa classes de teste (apenas funções test_*), então
+# python_classes aponta para um padrão que nunca casa — evita que pytest
+# tente coletar exceções de domínio cujo nome começa com "Test"
+# (ex.: wp1a.errors.TestSetLeakageError) como classe de teste.
+python_classes = ["NoTestClassesUsedInThisSuite"]
+addopts = "-ra"

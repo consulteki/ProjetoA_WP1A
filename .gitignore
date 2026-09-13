@@ -1,0 +1,55 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Dados (grandes / gerados — nunca versionar os brutos ou intermediários) ---
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# --- Modelos treinados (binários grandes) ---
+models/*
+!models/.gitkeep
+
+# --- Resultados gerados (mantenha apenas via processo de release, não commit direto de tudo) ---
+results/raw/*
+!results/raw/.gitkeep
+results/predictions/*
+!results/predictions/.gitkeep
+
+# Métricas, tabelas, figuras e metadados costumam ser pequenos e valem a
+# pena versionar para auditoria (docs/protocols/reproducibility_protocol.md);
+# ajuste as duas linhas abaixo se o volume crescer demais.
+# results/metrics/*
+# results/tables/*
+# results/figures/*
+# results/metadata/*
+
+# --- Notebooks: remova outputs pesados antes de commitar quando possível ---
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Segredos (nunca commitar — AGENTS.md GIT-R04) ---
+.env
+*.pem
+*.key
+secrets.yaml

@@ -1,0 +1,30 @@
+Copyright (c) 2026 Grupo A — Disciplina MEI0028 (Modelagem e Simulação),
+Programa de Pós-Graduação, Pontifícia Universidade Católica de Goiás.
+
+Todos os direitos reservados.
+
+--------------------------------------------------------------------------
+NOTA (placeholder — decisão a ser tomada pelo grupo/orientador)
+--------------------------------------------------------------------------
+
+Este arquivo é um placeholder. Nenhuma licença de código aberto foi
+selecionada automaticamente porque essa é uma decisão de propriedade
+intelectual/política institucional que cabe ao grupo e ao professor
+responsável (Clarimar José Coelho) e ao programa de pós-graduação,
+não a este processo de scaffolding.
+
+Ao decidir, considere:
+
+  - Se o código (src/, tests/) deve ser aberto sob uma licença permissiva
+    (ex.: MIT, Apache-2.0) para reuso por outros subprojetos da linha de
+    pesquisa "Diagnóstico Inteligente de Falhas em Sistemas Dinâmicos
+    Industriais".
+  - Se o manuscrito científico (article/) deve seguir a licença exigida
+    pelo periódico-alvo (ver docs/specs/SPEC-009-publication.md) — em
+    geral distinta da licença do código.
+  - Se os dados do Tennessee Eastman Process (data/) estão sujeitos aos
+    termos de uso da fonte original (ver docs/project/WP1A_SOURCE.pdf,
+    Referências) — a licença deste repositório não altera esses termos.
+
+Substitua este arquivo pelo texto legal definitivo assim que a decisão
+for tomada.

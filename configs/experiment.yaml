@@ -1,0 +1,39 @@
+# Configuração de experimento — TEMPLATE.
+#
+# Referência: docs/adr/ADR-005-experiment-configuration.md.
+# Toda execução experimental DEVE ser definida por uma configuração
+# explícita e versionada como esta, referenciando o dataset canônico
+# (SPEC-002), o manifesto de divisão (SPEC-004) e a semente (seeds.yaml).
+#
+# Este template descreve o SCHEMA esperado; preencher um arquivo real
+# por experimento (ex.: configs/experiments/exp-2026-09-13-001.yaml)
+# antes de rodar SPEC-006.
+
+experiment_id: "REPLACE_ME"          # ex.: exp-2026-09-13-001
+
+dataset:
+  canonical_dataset_id: "REPLACE_ME" # identificador registrado por SPEC-002
+  registry_path: data/processed/canonical_dataset_registry.json
+
+split:
+  manifest_path: "REPLACE_ME"        # ex.: data/processed/split_manifest_v1.json
+  seed_ref: seeds.yaml#global_seed
+
+preprocessing:
+  scaler: "standard"                  # ajustado exclusivamente no treino (ADR-002)
+  fitted_on: "train"
+
+models_config_ref: models.yaml
+
+hyperparameters:
+  # Preencher com os hiperparâmetros FINAIS e CONGELADOS de cada modelo,
+  # não o espaço de busca (esse fica em models.yaml). Congelamento
+  # explícito conforme docs/adr/ADR-002-test-set-isolation.md.
+  frozen: false
+
+software_versions:
+  python: "REPLACE_ME"
+  scikit-learn: "REPLACE_ME"
+  xgboost: "REPLACE_ME"
+
+timestamp: "REPLACE_ME"               # preenchido no momento do congelamento

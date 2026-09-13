@@ -1,0 +1,59 @@
+# Definição dos 6 modelos obrigatórios do benchmark WP1A e seus espaços de
+# busca de hiperparâmetros (a preencher/ajustar ao implementar SPEC-006).
+#
+# Referência: docs/adr/ADR-006-model-family-selection.md.
+# A seleção de hiperparâmetros DEVE usar apenas treino/validação
+# (ver docs/adr/ADR-002-test-set-isolation.md).
+#
+# Este arquivo é um TEMPLATE: os valores de search_space são pontos de
+# partida razoáveis, não uma decisão metodológica já tomada. Ajustar e
+# documentar a versão final na tabela de hiperparâmetros (insumo do
+# artigo, docs/specs/SPEC-009-publication.md).
+
+models:
+  logistic_regression:
+    id: MOD-1
+    role: "Baseline linear, interpretável e de baixo custo computacional."
+    search_space:
+      C: [0.01, 0.1, 1.0, 10.0]
+      penalty: ["l2"]
+      max_iter: [1000]
+
+  decision_tree:
+    id: MOD-2
+    role: "Modelo não linear simples, com regras diretamente interpretáveis."
+    search_space:
+      max_depth: [5, 10, 20, null]
+      min_samples_leaf: [1, 5, 10]
+
+  random_forest:
+    id: MOD-3
+    role: "Método de conjunto com redução de variância e boa robustez."
+    search_space:
+      n_estimators: [200, 400, 800]
+      max_depth: [10, 20, null]
+      min_samples_leaf: [1, 5]
+
+  gradient_boosting:
+    id: MOD-4
+    role: "Referência de boosting sequencial com árvores rasas."
+    search_space:
+      n_estimators: [100, 300]
+      learning_rate: [0.05, 0.1]
+      max_depth: [2, 3]
+
+  svm:
+    id: MOD-5
+    role: "Classificador de margem máxima; implementação inicial escalável."
+    search_space:
+      C: [0.1, 1.0, 10.0]
+      kernel: ["rbf", "linear"]
+
+  xgboost:
+    id: MOD-6
+    role: "Baseline forte de boosting otimizado e regularizado."
+    search_space:
+      n_estimators: [200, 400]
+      learning_rate: [0.05, 0.1]
+      max_depth: [3, 6]
+      reg_lambda: [1.0, 10.0]

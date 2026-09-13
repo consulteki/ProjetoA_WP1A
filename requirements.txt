@@ -1,0 +1,19 @@
+# Dependências do projeto WP1A.
+#
+# Espelha [project.dependencies] + [project.optional-dependencies.dev]
+# em pyproject.toml. Fixe versões exatas (==) quando o pipeline for
+# implementado e um experimento for congelado, para reprodutibilidade
+# (docs/adr/ADR-003-reproducibility.md, REP-03).
+
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.4
+xgboost>=2.0
+scipy>=1.11
+matplotlib>=3.8
+seaborn>=0.13
+pyyaml>=6.0
+
+# dev / testes
+pytest>=8.0
+jupyter>=1.0

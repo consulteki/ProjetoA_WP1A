@@ -11,5 +11,6 @@
   - `NON_CANONICAL.md` — política do que não pode alimentar A5–A9.
   - Também receberá conjuntos pré-processados (`SPEC-005`).
   - Entrega A3: `split_manifest_v1.json`, `train_runs.csv`, `validation_runs.csv`, `test_runs.csv`.
+  - SPEC-005: `preprocessor_v1_{train,validation,test}.csv.gz`, `preprocessor_v1_scaler_params.json`, `preprocessing_registry.json`.
 
 Nenhum arquivo grande aqui é versionado por padrão (ver `.gitignore`); os `.gitkeep` mantêm a estrutura de pastas no controle de versão. Exceções versionáveis: registro canônico, `NON_CANONICAL.md` e manifesto A3 (`split_manifest_v1.json` + CSVs de runs).

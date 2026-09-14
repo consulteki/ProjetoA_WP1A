@@ -34,8 +34,8 @@ test-methodology:
 	$(PYTHON) -m pytest tests/methodology
 
 # --- Etapas do pipeline -------------------------------------------------
-# Cada alvo aponta para a skill/SPEC correspondente. SPEC-001..004 já
-# estão implementadas; as demais permanecem conforme SPEC-005..009.
+# Cada alvo aponta para a skill/SPEC correspondente. SPEC-001..005 já
+# estão implementadas; as demais permanecem conforme SPEC-006..009.
 audit:
 	$(PYTHON) -m wp1a.data.audit_cli
 
@@ -49,9 +49,7 @@ split:
 	$(PYTHON) -m wp1a.splitting.cli
 
 preprocess:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-005-preprocessing.md e .agents/skills/preprocessing/SKILL.md"
-	@echo "Guarda disponivel: src/wp1a/tracking/isolation_guard.py (GuardedFitter)"
+	$(PYTHON) -m wp1a.preprocessing.cli
 
 train:
 	@echo "TODO: nao implementado ainda."

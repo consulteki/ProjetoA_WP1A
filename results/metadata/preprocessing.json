@@ -1,0 +1,14 @@
+{
+  "preprocessor_version": "preprocessor_v1",
+  "created_at": "2026-09-14T01:41:54+00:00",
+  "n_train": 16340,
+  "n_validation": 7200,
+  "n_test": 6720,
+  "fit_partition": "train",
+  "artifacts": {
+    "train": "data/processed/preprocessor_v1_train.csv.gz",
+    "validation": "data/processed/preprocessor_v1_validation.csv.gz",
+    "test": "data/processed/preprocessor_v1_test.csv.gz",
+    "scaler_params": "data/processed/preprocessor_v1_scaler_params.json"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "ready_for_training",
+  "preprocessor_version": "preprocessor_v1",
+  "dataset_version": "tep-canonical-v1",
+  "split_manifest": "split_manifest_v1.json",
+  "created_at": "2026-09-14T01:41:54+00:00",
+  "fit_policy": "scaler.fit(TRAIN) only; transform(TRAIN|VAL|TEST); never fit(all_data)",
+  "artifacts": {
+    "train": "data/processed/preprocessor_v1_train.csv.gz",
+    "validation": "data/processed/preprocessor_v1_validation.csv.gz",
+    "test": "data/processed/preprocessor_v1_test.csv.gz",
+    "scaler_params": "data/processed/preprocessor_v1_scaler_params.json"
+  }
+}

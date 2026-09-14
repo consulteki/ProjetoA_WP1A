@@ -96,7 +96,8 @@ wp1a-tep-benchmark/
 | Dataset canônico (SPEC-002) | ✅ Implementado (`make canonical-dataset` → `data/processed/canonical_dataset_registry.json`, `tep-canonical-v1.csv.gz`) |
 | Etapa 2 — EDA (SPEC-003 / Entrega A2) | ✅ Implementada (`make eda` → `reports/eda/`, `results/figures/A2_*.png`, `results/tables/A2_*.csv`) |
 | Etapa 3 — Divisão por run (SPEC-004 / Entrega A3) | ✅ Implementada (`make split` → `data/processed/split_manifest_v1.json`, `train_runs.csv`, `validation_runs.csv`, `test_runs.csv`) |
-| Pipeline restante (pré-processamento → treino → avaliação) | ⛔ Não implementado — ver `.agents/skills/` e `docs/specs/SPEC-005..007.md` |
+| Etapa 4 — Pré-processamento (SPEC-005) | ✅ Implementada (`make preprocess` → `preprocessor_v1_*.csv.gz`, `preprocessor_v1_scaler_params.json`; fit só no treino) |
+| Pipeline restante (treino → avaliação) | ⛔ Não implementado — ver `.agents/skills/` e `docs/specs/SPEC-006..007.md` |
 | Análise estatística, figuras, manuscrito | ⛔ Não implementado — ver `docs/specs/SPEC-008.md`, `SPEC-009.md` |
 
 ## Como rodar os testes

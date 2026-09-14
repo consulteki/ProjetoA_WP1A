@@ -28,6 +28,8 @@ data/processed/*
 !data/processed/train_runs.csv
 !data/processed/validation_runs.csv
 !data/processed/test_runs.csv
+!data/processed/preprocessing_registry.json
+!data/processed/preprocessor_v1_scaler_params.json
 
 # --- Modelos treinados (binários grandes) ---
 models/*

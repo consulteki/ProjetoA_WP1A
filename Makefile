@@ -34,9 +34,9 @@ test-methodology:
 	$(PYTHON) -m pytest tests/methodology
 
 # --- Etapas do pipeline -------------------------------------------------
-# Cada alvo aponta para a skill/SPEC correspondente. SPEC-001 (audit) e
-# SPEC-002 (canonical-dataset) já estão implementadas; as demais
-# permanecem a implementar conforme docs/specs/SPEC-003..009.md.
+# Cada alvo aponta para a skill/SPEC correspondente. SPEC-001 (audit),
+# SPEC-002 (canonical-dataset) e SPEC-003 (eda) já estão implementadas;
+# as demais permanecem a implementar conforme docs/specs/SPEC-004..009.md.
 audit:
 	$(PYTHON) -m wp1a.data.audit_cli
 
@@ -44,8 +44,7 @@ canonical-dataset:
 	$(PYTHON) -m wp1a.data.canonical_cli
 
 eda:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-003-eda.md e .agents/skills/exploratory-analysis/SKILL.md"
+	$(PYTHON) -m wp1a.eda.cli
 
 split:
 	@echo "TODO: nao implementado ainda."

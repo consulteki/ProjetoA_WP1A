@@ -6,6 +6,7 @@ currently implemented:
 
 - ``wp1a.data.audit`` / ``wp1a.data.audit_cli`` — Etapa 1 (Entrega A1)
 - ``wp1a.data.canonical`` / ``wp1a.data.canonical_cli`` — SPEC-002 (dataset canônico)
+- ``wp1a.eda`` / ``wp1a.eda.cli`` — Etapa 2 / SPEC-003 (Entrega A2)
 
 Normative references:
 

@@ -1,7 +1,8 @@
-.PHONY: setup test test-unit test-methodology lint audit canonical-dataset eda split preprocess dry-run train evaluate statistics figures report clean help
+.PHONY: setup test test-unit test-methodology lint audit canonical-dataset eda split preprocess dry-run train evaluate statistics figures report presentation reproduce clean help
 
 PYTHON ?= python3
 PIP ?= pip
+export PYTHONPATH := src:$(PYTHONPATH)
 
 help:
 	@echo "WP1A — alvos disponiveis:"
@@ -20,6 +21,9 @@ help:
 	@echo "  statistics         analise estatistica formal (.agents/skills/statistical-analysis)"
 	@echo "  figures            tabelas/figuras do artigo (.agents/skills/scientific-figures)"
 	@echo "  report             relatorio tecnico + manuscrito (.agents/skills/scientific-writing)"
+	@echo "  presentation       Entrega A9 - slides Beamer (presentation/A9_presentation.pdf)"
+	@echo "  reproduce          verifica reprodutibilidade: test + evaluate + statistics + figures"
+	@echo "                     (NAO retreina; usa predicoes congeladas de exp-a4-v2)"
 	@echo "  clean              remove artefatos de cache (__pycache__, .pytest_cache)"
 
 setup:
@@ -65,20 +69,33 @@ train:
 		--experiment-config configs/experiments/exp-a4-v2.yaml
 
 evaluate:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-007-evaluation.md e .agents/skills/ml-evaluation/SKILL.md"
+	$(PYTHON) -m wp1a.evaluation.cli --experiment-id exp-a4-v2
 
 statistics:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-008-statistics.md e .agents/skills/statistical-analysis/SKILL.md"
+	$(PYTHON) -m wp1a.statistics.cli --experiment-id exp-a4-v2
 
 figures:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-009-publication.md e .agents/skills/scientific-figures/SKILL.md"
+	$(PYTHON) -m wp1a.visualization.cli --experiment-id exp-a4-v2
 
 report:
-	@echo "TODO: nao implementado ainda."
+	@echo "A7/A8: reports/technical/A7_technical_report.md ; article/manuscript/"
 	@echo "Siga docs/specs/SPEC-009-publication.md e .agents/skills/scientific-writing/SKILL.md"
+
+presentation:
+	cd presentation && xelatex -interaction=nonstopmode A9_presentation.tex && \
+		xelatex -interaction=nonstopmode A9_presentation.tex
+
+# Reprodutibilidade operacional (docs/protocols/reproducibility_protocol.md):
+# recomputa A5/A8-stats/A6 a partir das predicoes congeladas + suite de testes.
+# Nao inclui `train` (custo alto; novo treino que altere conclusoes exige novo
+# experiment_id — EXP-R04). Para retreinar: `make train` explicitamente.
+reproduce: test evaluate statistics figures
+	@echo ""
+	@echo "========================================================================"
+	@echo " make reproduce OK — experiment_id=exp-a4-v2"
+	@echo " Verificado: pytest + A5 (evaluate) + SPEC-008 (statistics) + A6 (figures)"
+	@echo " Predicoes/modelos congelados NAO foram retreinados."
+	@echo "========================================================================"
 
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true

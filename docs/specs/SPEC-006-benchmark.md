@@ -17,7 +17,10 @@ Treinar os 6 modelos obrigatórios do benchmark sob configurações explícitas 
 
 ## 2. Escopo
 
-Cobre o treinamento e a seleção de hiperparâmetros dos 6 modelos. Não cobre o cálculo de métricas de avaliação (ver SPEC-007).
+Cobre o treinamento e a seleção de hiperparâmetros dos 6 modelos no **baseline A4**.
+A busca ampliada / formal de hiperparâmetros **após** o baseline é especificada em
+`docs/specs/SPEC-006A-hyperparameter-search.md` (pré-condição: A4 baseline completo).
+Não cobre o cálculo consolidado de métricas de avaliação (ver SPEC-007).
 
 ## 3. Requisitos
 
@@ -41,4 +44,4 @@ Cobre o treinamento e a seleção de hiperparâmetros dos 6 modelos. Não cobre 
 
 ## 6. Rastreabilidade
 
-`ADR-002`, `ADR-005`, `ADR-006` → `SPEC-000-master.md` §7.5, §8, INV-03/INV-05 → esta SPEC → `.agents/skills/ml-training/SKILL.md`.
+`ADR-002`, `ADR-005`, `ADR-006` → `SPEC-000-master.md` §7.5, §8, INV-03/INV-05 → esta SPEC (baseline) → `SPEC-006A-hyperparameter-search.md` (tuning pós-baseline) → `.agents/skills/ml-training/SKILL.md`.

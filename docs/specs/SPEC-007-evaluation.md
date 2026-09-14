@@ -6,8 +6,9 @@
 | Skill correspondente | `.agents/skills/ml-evaluation/SKILL.md` |
 | Etapa do pipeline | Etapa 6 |
 | Entrega | A5 |
-| Guardas executáveis | `src/wp1a/data/class_consistency.py`, `src/wp1a/data/schema.py` |
-| Testes de rejeição | `tests/unit/test_class_consistency.py`, `tests/unit/test_schema_validation.py` |
+| Guardas executáveis | `src/wp1a/data/class_consistency.py`, `src/wp1a/evaluation/verify.py` |
+| Implementação | `src/wp1a/evaluation/` (`cli`, `pipeline`, `metrics`, `confused_classes`) |
+| Testes de rejeição | `tests/unit/test_class_consistency.py`, `tests/unit/test_schema_validation.py`, `tests/unit/test_evaluation_a5.py` |
 
 Em caso de conflito, prevalece `SPEC-000-master.md` e `ADR-007-multi-criteria-model-evaluation.md`.
 
@@ -44,4 +45,4 @@ Cobre o cálculo e a consolidação de métricas. Não cobre testes estatístico
 
 ## 6. Rastreabilidade
 
-`ADR-007-multi-criteria-model-evaluation.md` → `SPEC-000-master.md` §7.6, §9, INV-06/INV-07 → esta SPEC → `.agents/skills/ml-evaluation/SKILL.md`.
+`ADR-007-multi-criteria-model-evaluation.md` → `SPEC-000-master.md` §7.6, §9, INV-06/INV-07 → esta SPEC → `.agents/skills/ml-evaluation/SKILL.md` → `src/wp1a/evaluation/`.

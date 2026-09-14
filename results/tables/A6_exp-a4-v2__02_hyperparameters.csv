@@ -1,0 +1,7 @@
+model_id,mod_code,experiment_id,param__C,param__max_iter,param__solver,param__criterion,param__max_depth,param__min_samples_leaf,param__n_estimators,param__n_jobs,param__learning_rate,param__cache_size,param__kernel,param__reg_lambda,param__tree_method,param__device
+logistic_regression,MOD-1,exp-a4-v2__logistic_regression,10.0,1000.0,lbfgs,,,,,,,,,,,
+decision_tree,MOD-2,exp-a4-v2__decision_tree,,,,gini,20.0,5.0,,,,,,,,
+random_forest,MOD-3,exp-a4-v2__random_forest,,,,,20.0,1.0,200.0,-1.0,,,,,,
+gradient_boosting,MOD-4,exp-a4-v2__gradient_boosting,,,,,3.0,,50.0,,0.1,,,,,
+svm,MOD-5,exp-a4-v2__svm,10.0,,,,,,,,,500.0,linear,,,
+xgboost,MOD-6,exp-a4-v2__xgboost,,,,,6.0,,100.0,-1.0,0.1,,,1.0,hist,cpu

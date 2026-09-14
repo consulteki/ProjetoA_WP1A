@@ -1,0 +1,20 @@
+{
+  "test": "Friedman",
+  "metric": "run_accuracy",
+  "experimental_unit": "run_id",
+  "n_units": 11,
+  "n_models": 6,
+  "model_ids": [
+    "logistic_regression",
+    "decision_tree",
+    "random_forest",
+    "gradient_boosting",
+    "svm",
+    "xgboost"
+  ],
+  "statistic": 14.078947368421066,
+  "pvalue": 0.01511563290012973,
+  "alpha": 0.05,
+  "reject_h0": true,
+  "h0": "all models have equal run-level accuracy distributions (ranks)"
+}

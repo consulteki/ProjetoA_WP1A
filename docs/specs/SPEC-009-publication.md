@@ -31,6 +31,9 @@ Cobre a produção de figuras/tabelas (A6), relatório técnico (A7), manuscrito
 8. Análise das falhas mais confundidas.
 
 Cada item DEVE ser rastreável a um arquivo de resultado versionado em `results/`.
+**Regra de implementação:** o gerador A6 (`src/wp1a/visualization/`) lê **somente**
+caminhos sob `results/` — é **proibido** ler `data/raw` (ou interim) para produzir
+figuras/tabelas A6.
 
 ### 3.2 Relatório técnico (A7) e manuscrito (A8)
 
@@ -53,4 +56,4 @@ Síntese do relatório/manuscrito, cobrindo problema, hipóteses, protocolo, res
 
 ## 6. Rastreabilidade
 
-`SPEC-000-master.md` §11, §14 → esta SPEC → `.agents/skills/scientific-figures/SKILL.md`, `.agents/skills/scientific-writing/SKILL.md`.
+`SPEC-000-master.md` §11, §14 → esta SPEC → `.agents/skills/scientific-figures/SKILL.md` → `src/wp1a/visualization/` (A6; sources ⊆ `results/` only).

@@ -1,0 +1,676 @@
+{
+  "disclaimer": "Preliminary QP3 input only \u2014 lists systematically difficult/confused fault classes; does NOT declare a best model (INV-06).",
+  "per_model_lowest_f1_faults": {
+    "decision_tree": [
+      {
+        "class_label": 1,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 3,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 480
+      },
+      {
+        "class_label": 4,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 5,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 7,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      }
+    ],
+    "gradient_boosting": [
+      {
+        "class_label": 1,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 4,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 5,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 7,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 8,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      }
+    ],
+    "logistic_regression": [
+      {
+        "class_label": 1,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 4,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 5,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 7,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 8,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      }
+    ],
+    "random_forest": [
+      {
+        "class_label": 1,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 4,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 5,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 7,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 8,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      }
+    ],
+    "svm": [
+      {
+        "class_label": 1,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 4,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 5,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 7,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 8,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      }
+    ],
+    "xgboost": [
+      {
+        "class_label": 1,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 4,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 5,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 7,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "class_label": 8,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      }
+    ]
+  },
+  "per_model_top_confused_pairs": {
+    "decision_tree": [
+      {
+        "count": 534,
+        "pred_class": 15,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 424,
+        "pred_class": 15,
+        "true_class": 3,
+        "true_support": 480
+      },
+      {
+        "count": 247,
+        "pred_class": 15,
+        "true_class": 19,
+        "true_support": 480
+      },
+      {
+        "count": 236,
+        "pred_class": 15,
+        "true_class": 18,
+        "true_support": 960
+      },
+      {
+        "count": 172,
+        "pred_class": 15,
+        "true_class": 20,
+        "true_support": 480
+      },
+      {
+        "count": 150,
+        "pred_class": 12,
+        "true_class": 13,
+        "true_support": 480
+      },
+      {
+        "count": 140,
+        "pred_class": 15,
+        "true_class": 14,
+        "true_support": 960
+      },
+      {
+        "count": 119,
+        "pred_class": 12,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 100,
+        "pred_class": 9,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 65,
+        "pred_class": 15,
+        "true_class": 11,
+        "true_support": 480
+      }
+    ],
+    "gradient_boosting": [
+      {
+        "count": 173,
+        "pred_class": 8,
+        "true_class": 13,
+        "true_support": 480
+      },
+      {
+        "count": 167,
+        "pred_class": 15,
+        "true_class": 3,
+        "true_support": 480
+      },
+      {
+        "count": 161,
+        "pred_class": 15,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 139,
+        "pred_class": 9,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 118,
+        "pred_class": 9,
+        "true_class": 3,
+        "true_support": 480
+      },
+      {
+        "count": 118,
+        "pred_class": 3,
+        "true_class": 15,
+        "true_support": 480
+      },
+      {
+        "count": 115,
+        "pred_class": 16,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 99,
+        "pred_class": 15,
+        "true_class": 18,
+        "true_support": 960
+      },
+      {
+        "count": 92,
+        "pred_class": 9,
+        "true_class": 15,
+        "true_support": 480
+      },
+      {
+        "count": 91,
+        "pred_class": 3,
+        "true_class": 10,
+        "true_support": 960
+      }
+    ],
+    "logistic_regression": [
+      {
+        "count": 530,
+        "pred_class": 5,
+        "true_class": 18,
+        "true_support": 960
+      },
+      {
+        "count": 193,
+        "pred_class": 17,
+        "true_class": 14,
+        "true_support": 960
+      },
+      {
+        "count": 183,
+        "pred_class": 12,
+        "true_class": 13,
+        "true_support": 480
+      },
+      {
+        "count": 179,
+        "pred_class": 4,
+        "true_class": 6,
+        "true_support": 480
+      },
+      {
+        "count": 160,
+        "pred_class": 15,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 149,
+        "pred_class": 11,
+        "true_class": 14,
+        "true_support": 960
+      },
+      {
+        "count": 134,
+        "pred_class": 16,
+        "true_class": 13,
+        "true_support": 480
+      },
+      {
+        "count": 129,
+        "pred_class": 15,
+        "true_class": 14,
+        "true_support": 960
+      },
+      {
+        "count": 99,
+        "pred_class": 19,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 98,
+        "pred_class": 4,
+        "true_class": 11,
+        "true_support": 480
+      }
+    ],
+    "random_forest": [
+      {
+        "count": 274,
+        "pred_class": 15,
+        "true_class": 3,
+        "true_support": 480
+      },
+      {
+        "count": 238,
+        "pred_class": 16,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 225,
+        "pred_class": 15,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 139,
+        "pred_class": 15,
+        "true_class": 18,
+        "true_support": 960
+      },
+      {
+        "count": 124,
+        "pred_class": 12,
+        "true_class": 13,
+        "true_support": 480
+      },
+      {
+        "count": 102,
+        "pred_class": 15,
+        "true_class": 14,
+        "true_support": 960
+      },
+      {
+        "count": 98,
+        "pred_class": 9,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 96,
+        "pred_class": 3,
+        "true_class": 15,
+        "true_support": 480
+      },
+      {
+        "count": 92,
+        "pred_class": 3,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 91,
+        "pred_class": 12,
+        "true_class": 10,
+        "true_support": 960
+      }
+    ],
+    "svm": [
+      {
+        "count": 471,
+        "pred_class": 5,
+        "true_class": 18,
+        "true_support": 960
+      },
+      {
+        "count": 326,
+        "pred_class": 4,
+        "true_class": 6,
+        "true_support": 480
+      },
+      {
+        "count": 286,
+        "pred_class": 3,
+        "true_class": 14,
+        "true_support": 960
+      },
+      {
+        "count": 216,
+        "pred_class": 12,
+        "true_class": 13,
+        "true_support": 480
+      },
+      {
+        "count": 193,
+        "pred_class": 15,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 154,
+        "pred_class": 8,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 152,
+        "pred_class": 3,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 136,
+        "pred_class": 8,
+        "true_class": 13,
+        "true_support": 480
+      },
+      {
+        "count": 121,
+        "pred_class": 8,
+        "true_class": 14,
+        "true_support": 960
+      },
+      {
+        "count": 119,
+        "pred_class": 4,
+        "true_class": 14,
+        "true_support": 960
+      }
+    ],
+    "xgboost": [
+      {
+        "count": 178,
+        "pred_class": 15,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 163,
+        "pred_class": 16,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 137,
+        "pred_class": 15,
+        "true_class": 3,
+        "true_support": 480
+      },
+      {
+        "count": 136,
+        "pred_class": 12,
+        "true_class": 13,
+        "true_support": 480
+      },
+      {
+        "count": 126,
+        "pred_class": 3,
+        "true_class": 15,
+        "true_support": 480
+      },
+      {
+        "count": 121,
+        "pred_class": 9,
+        "true_class": 3,
+        "true_support": 480
+      },
+      {
+        "count": 114,
+        "pred_class": 9,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 92,
+        "pred_class": 3,
+        "true_class": 10,
+        "true_support": 960
+      },
+      {
+        "count": 91,
+        "pred_class": 9,
+        "true_class": 15,
+        "true_support": 480
+      },
+      {
+        "count": 84,
+        "pred_class": 15,
+        "true_class": 18,
+        "true_support": 960
+      }
+    ]
+  },
+  "systematic_confused_pairs": [
+    {
+      "pred_class": 15,
+      "total_count_across_models": 1451,
+      "true_class": 10
+    },
+    {
+      "pred_class": 15,
+      "total_count_across_models": 1002,
+      "true_class": 3
+    },
+    {
+      "pred_class": 5,
+      "total_count_across_models": 1001,
+      "true_class": 18
+    },
+    {
+      "pred_class": 12,
+      "total_count_across_models": 809,
+      "true_class": 13
+    },
+    {
+      "pred_class": 15,
+      "total_count_across_models": 558,
+      "true_class": 18
+    },
+    {
+      "pred_class": 16,
+      "total_count_across_models": 516,
+      "true_class": 10
+    },
+    {
+      "pred_class": 4,
+      "total_count_across_models": 505,
+      "true_class": 6
+    },
+    {
+      "pred_class": 9,
+      "total_count_across_models": 451,
+      "true_class": 10
+    },
+    {
+      "pred_class": 3,
+      "total_count_across_models": 427,
+      "true_class": 10
+    },
+    {
+      "pred_class": 15,
+      "total_count_across_models": 371,
+      "true_class": 14
+    }
+  ],
+  "systematic_low_f1_faults": [
+    {
+      "class_label": 1,
+      "n_models_in_worst_k": 6
+    },
+    {
+      "class_label": 4,
+      "n_models_in_worst_k": 6
+    },
+    {
+      "class_label": 5,
+      "n_models_in_worst_k": 6
+    },
+    {
+      "class_label": 7,
+      "n_models_in_worst_k": 6
+    },
+    {
+      "class_label": 8,
+      "n_models_in_worst_k": 5
+    }
+  ],
+  "worst_k": 5
+}

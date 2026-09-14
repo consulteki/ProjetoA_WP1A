@@ -1,0 +1,6 @@
+[
+  "Single seed and single train/val/test split (exp-a4-v2): EST-01 mean/SD/CI across seeds/partitions are not available; summaries are over test run_id units only.",
+  "Primary paired metric is run_accuracy (within-run accuracy). Each test run has a single true class; macro-F1/MCC over C=21 are not well-defined per run and are not used as Friedman blocks.",
+  "H3/H4 remain primarily SPEC-000 \u00a74 criterion evaluations on global holdout metrics/cost; Wilcoxon on run accuracy is primary for H1/H2.",
+  "Statistical power is limited by n_units=11 test runs."
+]

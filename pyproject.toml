@@ -1,6 +1,6 @@
 [project]
 name = "wp1a-tep-benchmark"
-version = "0.1.0"
+version = "1.0.0"
 description = "Benchmark reproduzível de métodos clássicos de aprendizado de máquina para diagnóstico de falhas no Tennessee Eastman Process (WP1A, MEI0028 — Modelagem e Simulação)."
 readme = "README.md"
 requires-python = ">=3.10"

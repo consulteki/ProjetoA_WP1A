@@ -2,8 +2,10 @@
 
 Manuscrito científico (Entrega A8) e seus insumos visuais/tabulares (parte da Entrega A6), conforme `docs/specs/SPEC-009-publication.md` e `.agents/skills/scientific-writing/SKILL.md`.
 
-- `manuscript/` — o manuscrito em si (LaTeX/Word), seguindo a estrutura obrigatória de 10 seções (introdução … referências).
-- `figures/` — figuras em formato de publicação (PNG/PDF) usadas no manuscrito.
-- `tables/` — tabelas em formato compatível com LaTeX usadas no manuscrito.
+- `manuscript/` — **Entrega A8**: `manuscript.tex` / `manuscript.pdf` / `references.bib` (10 seções SPEC-000 §11.4).
+- `figures/` — figuras A6 em formato de publicação (PNG) usadas no manuscrito.
+- `tables/` — tabelas A6 (CSV/TeX) usadas no manuscrito.
 
-Título provisório: *"Benchmark reproduzível de métodos clássicos de aprendizado de máquina para diagnóstico de falhas no Tennessee Eastman Process"*.
+Título: *"Benchmark reproduzível de métodos clássicos de aprendizado de máquina para diagnóstico de falhas no Tennessee Eastman Process"*.
+
+Experimento oficial: `exp-a4-v2`. Ver `manuscript/README.md` para compilação.

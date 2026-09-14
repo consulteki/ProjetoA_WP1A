@@ -100,10 +100,16 @@ wp1a-tep-benchmark/
 | Framework de experimento | ✅ `ExperimentRunner` (`src/wp1a/experiment/`) — caminho único para todos os classificadores (INV-03) |
 | Adapters dos 6 modelos (MOD-1..MOD-6) | ✅ `src/wp1a/models/adapters.py` — factories + `ClassifierProtocol`; treino completo (seleção/grid A4) ainda pendente |
 | Dry-run ponta a ponta | ✅ `make dry-run` — fração controlada de `run_id`s; artefatos em `results/dry_run/` marcados **DRY-RUN** (`scientific_validity: false`); **não** usar em conclusões |
-| Etapa 5 — Treino A4 (SPEC-006) | ✅ `make train` — 6 modelos via `ExperimentRunner`; loga seed, git SHA, environment, parameters, time, metrics, model size |
-| Etapa 6 — Avaliação (métricas no treino) | ✅ MET-01..MET-12 gravadas em `results/metrics/` e `results/tables/` na mesma execução do treino; consolidação A5 formal ainda pode evoluir |
-| Pipeline restante | ⛔ Estatística / figuras / manuscrito — ver `docs/specs/SPEC-008..009.md` |
-| Análise estatística, figuras, manuscrito | ⛔ Não implementado — ver `docs/specs/SPEC-008.md`, `SPEC-009.md` |
+| Etapa 5 — Treino A4 (SPEC-006) | ✅ `make train` — 6 modelos via `ExperimentRunner`; loga seed, git SHA, environment, parameters, time, metrics, model size (`exp-a4-v2`) |
+| Tuning de hiperparâmetros (SPEC-006A) | ⛔ Só após baseline A4 — ver `docs/specs/SPEC-006A-hyperparameter-search.md` |
+| Etapa 6 — Avaliação A5 (SPEC-007) | ✅ `make evaluate` — recomputa MET-01..09 a partir das predições; anexa MET-10..12; verifica F1/BA (CA-06); classes confundidas (QP3); sem ranking único (INV-06) |
+| Entrega A6 — Figuras/tabelas | ✅ `make figures` — insumos 1–8 a partir **somente** de `results/` (nunca `data/raw`); saída em `results/figures|tables/` e `article/` |
+| Entrega A7 — Relatório técnico | ✅ `reports/technical/A7_technical_report.md` (+ PDF); QP1–QP5 / H1–H4; ameaças §14; experimento `exp-a4-v2` |
+| Entrega A8 — Manuscrito científico | ✅ `article/manuscript/manuscript.tex` (+ PDF); 10 seções SPEC-000 §11.4; figuras A6 |
+| SPEC-008 — Estatística formal | ✅ `make statistics` — Friedman/Wilcoxon; unidade=`run_id`; artefatos `results/tables/A8_*` |
+| Entrega A9 — Apresentação | ✅ `presentation/A9_presentation.pdf` (Beamer; síntese A7/A8) |
+| Release | ✅ **v1.0.0** — `CHANGELOG.md`, `docs/releases/v1.0.0.md`; `make reproduce` |
+| Pipeline restante | ✅ Entregas A1–A9 cobertas para `exp-a4-v2` (riscos AR-1–AR-5 aceitos) |
 
 ## Como rodar os testes
 

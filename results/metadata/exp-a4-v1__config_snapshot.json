@@ -1,0 +1,134 @@
+{
+  "config_source": "configs/experiments/exp-a4-v1.yaml",
+  "created_at": "2026-09-14T02:16:31+00:00",
+  "dataset_version": "tep-canonical-v1",
+  "environment": {
+    "cpu_count": 16,
+    "executable": "/home/alanancy/anaconda3/bin/python",
+    "joblib": "1.4.2",
+    "machine": "x86_64",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.11.0-26-generic-x86_64-with-glibc2.40",
+    "processor": "x86_64",
+    "python": "3.12.7",
+    "python_implementation": "CPython",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1"
+  },
+  "experiment_id": "exp-a4-v1",
+  "git": {
+    "git_branch": "feat/experiment-runner",
+    "git_dirty": true,
+    "git_sha": "40c6c6026f39c6e356ed8e3e57950a7a89dddb5e",
+    "git_sha_short": "40c6c6026f39"
+  },
+  "model_ids": [
+    "logistic_regression",
+    "decision_tree",
+    "random_forest",
+    "gradient_boosting",
+    "svm",
+    "xgboost"
+  ],
+  "preprocessor_version": "preprocessor_v1",
+  "scientific_validity": true,
+  "search_spaces": {
+    "decision_tree": {
+      "criterion": [
+        "gini"
+      ],
+      "max_depth": [
+        5,
+        10,
+        20
+      ],
+      "min_samples_leaf": [
+        1,
+        5
+      ]
+    },
+    "gradient_boosting": {
+      "learning_rate": [
+        0.05,
+        0.1
+      ],
+      "max_depth": [
+        2,
+        3
+      ],
+      "n_estimators": [
+        50,
+        100
+      ]
+    },
+    "logistic_regression": {
+      "C": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "max_iter": [
+        1000
+      ],
+      "solver": [
+        "lbfgs"
+      ]
+    },
+    "random_forest": {
+      "max_depth": [
+        10,
+        20
+      ],
+      "min_samples_leaf": [
+        1
+      ],
+      "n_estimators": [
+        100,
+        200
+      ],
+      "n_jobs": [
+        -1
+      ]
+    },
+    "svm": {
+      "C": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "cache_size": [
+        500
+      ],
+      "kernel": [
+        "linear"
+      ]
+    },
+    "xgboost": {
+      "learning_rate": [
+        0.05,
+        0.1
+      ],
+      "max_depth": [
+        3,
+        6
+      ],
+      "n_estimators": [
+        100,
+        200
+      ],
+      "n_jobs": [
+        -1
+      ],
+      "reg_lambda": [
+        1.0
+      ],
+      "tree_method": [
+        "hist"
+      ]
+    }
+  },
+  "seed": 42,
+  "split_manifest_path": "data/processed/split_manifest_v1.json",
+  "status": "A4"
+}

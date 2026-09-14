@@ -40,6 +40,9 @@ results/raw/*
 !results/raw/.gitkeep
 results/predictions/*
 !results/predictions/.gitkeep
+results/dry_run/*
+!results/dry_run/.gitkeep
+!results/dry_run/DRY_RUN_README.md
 
 # Métricas, tabelas, figuras e metadados costumam ser pequenos e valem a
 # pena versionar para auditoria (docs/protocols/reproducibility_protocol.md);

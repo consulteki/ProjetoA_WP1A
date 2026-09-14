@@ -9,6 +9,10 @@ currently implemented:
 - ``wp1a.eda`` / ``wp1a.eda.cli`` — Etapa 2 / SPEC-003 (Entrega A2)
 - ``wp1a.splitting.grouped_split`` / ``wp1a.splitting.cli`` — Etapa 3 / SPEC-004 (Entrega A3)
 - ``wp1a.preprocessing`` / ``wp1a.preprocessing.cli`` — Etapa 4 / SPEC-005 (fit só no treino)
+- ``wp1a.experiment.ExperimentRunner`` — framework único de execução (pré–SPEC-006); todos os classificadores passam pelo mesmo runner
+- ``wp1a.experiment.dry_run_cli`` — smoke ponta a ponta em fração de runs (**DRY-RUN**, não científico)
+- ``wp1a.training.cli`` — Entrega A4 / SPEC-006 (6 modelos + proveniência completa)
+- ``wp1a.evaluation.metrics`` — MET-01..MET-09 (fórmulas SPEC-000 §9.2)
 
 Normative references:
 

@@ -1,4 +1,4 @@
-.PHONY: setup test test-unit test-methodology lint audit canonical-dataset eda split preprocess train evaluate statistics figures report clean help
+.PHONY: setup test test-unit test-methodology lint audit canonical-dataset eda split preprocess dry-run train evaluate statistics figures report clean help
 
 PYTHON ?= python3
 PIP ?= pip
@@ -14,6 +14,7 @@ help:
 	@echo "  eda                Etapa 2 - analise exploratoria (.agents/skills/exploratory-analysis)"
 	@echo "  split              Etapa 3 - divisao por run (.agents/skills/grouped-split)"
 	@echo "  preprocess         Etapa 4 - pre-processamento (.agents/skills/preprocessing)"
+	@echo "  dry-run            smoke ponta a ponta em fracao de runs (DRY-RUN; NAO cientifico)"
 	@echo "  train              Etapa 5 - treinamento dos 6 modelos (.agents/skills/ml-training)"
 	@echo "  evaluate           Etapa 6 - avaliacao final (.agents/skills/ml-evaluation)"
 	@echo "  statistics         analise estatistica formal (.agents/skills/statistical-analysis)"
@@ -51,10 +52,17 @@ split:
 preprocess:
 	$(PYTHON) -m wp1a.preprocessing.cli
 
+# Smoke end-to-end on a controlled fraction of run_ids. Outputs are explicitly
+# marked DRY-RUN and MUST NOT be treated as scientifically valid (not A4).
+dry-run:
+	$(PYTHON) -m wp1a.experiment.dry_run_cli \
+		--run-fraction 0.2 \
+		--max-runs-per-partition 3 \
+		--output-dir results/dry_run
+
 train:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-006-benchmark.md e .agents/skills/ml-training/SKILL.md"
-	@echo "Guarda disponivel: src/wp1a/tracking/isolation_guard.py (ExperimentState)"
+	$(PYTHON) -m wp1a.training.cli \
+		--experiment-config configs/experiments/exp-a4-v2.yaml
 
 evaluate:
 	@echo "TODO: nao implementado ainda."

@@ -34,34 +34,22 @@ test-methodology:
 	$(PYTHON) -m pytest tests/methodology
 
 # --- Etapas do pipeline -------------------------------------------------
-# Nenhuma etapa abaixo esta implementada ainda (AGENTS.md workflow: os
-# testes de rejeicao em tests/methodology e tests/unit vem antes da
-# implementacao do pipeline). Cada alvo aponta para a skill e a SPEC que
-# devem ser seguidas ao implementa-lo. Substitua o corpo do alvo pela
-# chamada real (ex.: `$(PYTHON) -m wp1a.data.audit_cli`) quando o modulo
-# correspondente existir em src/wp1a/.
-
+# Cada alvo aponta para a skill/SPEC correspondente. SPEC-001..005 já
+# estão implementadas; as demais permanecem conforme SPEC-006..009.
 audit:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-001-data-audit.md e .agents/skills/data-audit/SKILL.md"
+	$(PYTHON) -m wp1a.data.audit_cli
 
 canonical-dataset:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-002-canonical-dataset.md e .agents/skills/canonical-dataset/SKILL.md"
+	$(PYTHON) -m wp1a.data.canonical_cli
 
 eda:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-003-eda.md e .agents/skills/exploratory-analysis/SKILL.md"
+	$(PYTHON) -m wp1a.eda.cli
 
 split:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-004-splitting.md e .agents/skills/grouped-split/SKILL.md"
-	@echo "Guardas disponiveis: src/wp1a/splitting/ (check_run_disjoint, assert_split_reproducible)"
+	$(PYTHON) -m wp1a.splitting.cli
 
 preprocess:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-005-preprocessing.md e .agents/skills/preprocessing/SKILL.md"
-	@echo "Guarda disponivel: src/wp1a/tracking/isolation_guard.py (GuardedFitter)"
+	$(PYTHON) -m wp1a.preprocessing.cli
 
 train:
 	@echo "TODO: nao implementado ainda."

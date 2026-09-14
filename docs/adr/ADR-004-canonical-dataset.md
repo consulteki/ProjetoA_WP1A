@@ -48,3 +48,7 @@ O TEP possui diferentes versões e derivações amplamente utilizadas na literat
 ## Critério de verificação
 
 Qualquer artefato de resultado (A5 em diante) é rastreável ao relatório de auditoria (A1) do dataset canônico; uma verificação de integridade (contagem de linhas/colunas, número de classes, número de execuções) confirma correspondência entre os dados efetivamente usados no treinamento e o que está documentado em A1.
+
+## Emendas
+
+- [ADR-004-amendment-001](./ADR-004-amendment-001-canonical-freeze.md) — congelamento de `tep-canonical-v1` (exclusão da classe 21, orientação em memória de `d00.dat`, retenção de duplicatas pré-falha).

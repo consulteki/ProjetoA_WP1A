@@ -1,0 +1,106 @@
+{
+  "manifest_version": "split_manifest_v1",
+  "seed": 42,
+  "dataset_version": "tep-canonical-v1",
+  "n_train_runs": 21,
+  "n_validation_runs": 10,
+  "n_test_runs": 11,
+  "class_coverage": {
+    "train": {
+      "n_runs": 21,
+      "n_classes": 21,
+      "classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "missing_classes": []
+    },
+    "validation": {
+      "n_runs": 10,
+      "n_classes": 10,
+      "classes": [
+        0,
+        1,
+        4,
+        5,
+        7,
+        8,
+        9,
+        12,
+        16,
+        17
+      ],
+      "missing_classes": [
+        2,
+        3,
+        6,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20
+      ]
+    },
+    "test": {
+      "n_runs": 11,
+      "n_classes": 11,
+      "classes": [
+        2,
+        3,
+        6,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20
+      ],
+      "missing_classes": [
+        0,
+        1,
+        4,
+        5,
+        7,
+        8,
+        9,
+        12,
+        16,
+        17
+      ]
+    }
+  },
+  "limitations": [
+    "validation lacks class_label(s) [2, 3, 6, 10, 11, 13, 14, 15, 18, 19, 20] because the canonical dataset has only two runs per class; one run/class is reserved for train, so val/test cannot simultaneously cover all 21 classes.",
+    "test lacks class_label(s) [0, 1, 4, 5, 7, 8, 9, 12, 16, 17] because the canonical dataset has only two runs per class; one run/class is reserved for train, so val/test cannot simultaneously cover all 21 classes."
+  ],
+  "artifacts": {
+    "manifest": "/home/alanancy/metodosEsimulacao/data/processed/split_manifest_v1.json",
+    "train_runs": "/home/alanancy/metodosEsimulacao/data/processed/train_runs.csv",
+    "validation_runs": "/home/alanancy/metodosEsimulacao/data/processed/validation_runs.csv",
+    "test_runs": "/home/alanancy/metodosEsimulacao/data/processed/test_runs.csv"
+  }
+}

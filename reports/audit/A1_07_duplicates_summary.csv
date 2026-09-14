@@ -1,0 +1,2 @@
+intra_file_duplicate_row_count,cross_file_duplicate_group_count,summary
+0,160,"grupos de linhas idênticas presentes em ≥2 arquivos: 160; nota: no pacote Braatz, arquivos *_te.dat tipicamente compartilham o trecho inicial em operação normal (pré-introdução da falha); isso é um achado de auditoria a decidir em SPEC-002, não uma correção silenciosa nesta etapa"

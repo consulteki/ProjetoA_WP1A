@@ -2,13 +2,7 @@
 
 Reference: docs/specs/SPEC-000-master.md §5 (DS-01..DS-06) — 52 process
 variables, 21 classes (1 normal + 20 faults), run_id traceability.
-Reference: docs/adr/ADR-004-canonical-dataset.md.
-
-This module only validates *shape and type* conformance. It does not
-decide which files constitute the canonical dataset (skill
-`canonical-dataset`) and does not audit data quality beyond what is
-needed to reject a structurally invalid dataframe (skill `data-audit`
-covers the full audit).
+Reference: docs/adr/ADR-004-canonical-dataset.md; SPEC-002.
 """
 
 from __future__ import annotations
@@ -28,8 +22,18 @@ FEATURE_COLUMNS: tuple[str, ...] = tuple(
 
 RUN_ID_COLUMN = "run_id"
 CLASS_LABEL_COLUMN = "class_label"
+SOURCE_FILE_COLUMN = "source_file"
+SOURCE_SPLIT_COLUMN = "source_split"
+SAMPLE_INDEX_COLUMN = "sample_index"
+
 ID_COLUMNS: tuple[str, ...] = (RUN_ID_COLUMN, CLASS_LABEL_COLUMN)
+PROVENANCE_COLUMNS: tuple[str, ...] = (
+    SOURCE_FILE_COLUMN,
+    SOURCE_SPLIT_COLUMN,
+    SAMPLE_INDEX_COLUMN,
+)
 REQUIRED_COLUMNS: tuple[str, ...] = FEATURE_COLUMNS + ID_COLUMNS
+CANONICAL_REQUIRED_COLUMNS: tuple[str, ...] = REQUIRED_COLUMNS + PROVENANCE_COLUMNS
 
 N_EXPECTED_FEATURES = 52
 N_EXPECTED_CLASSES = 21
@@ -40,7 +44,7 @@ assert len(FEATURE_COLUMNS) == N_EXPECTED_FEATURES, "FEATURE_COLUMNS must define
 
 
 def validate_schema(df: pd.DataFrame) -> None:
-    """Validate that ``df`` conforms to the canonical WP1A/TEP schema.
+    """Validate that ``df`` conforms to the core WP1A/TEP schema (DS-02..DS-04).
 
     Raises
     ------
@@ -68,8 +72,12 @@ def validate_schema(df: pd.DataFrame) -> None:
     for col in present_features:
         if not pd.api.types.is_numeric_dtype(df[col]):
             errors.append(f"feature column '{col}' is not numeric (dtype={df[col].dtype})")
-        elif np.isinf(df[col].to_numpy(dtype="float64", na_value=0.0)).any():
-            errors.append(f"feature column '{col}' contains infinite values")
+        else:
+            values = df[col].to_numpy(dtype="float64", copy=False)
+            if np.isnan(values).any():
+                errors.append(f"feature column '{col}' contains NaN values")
+            elif np.isinf(values).any():
+                errors.append(f"feature column '{col}' contains infinite values")
 
     if RUN_ID_COLUMN in columns:
         if df[RUN_ID_COLUMN].isna().any():
@@ -87,5 +95,27 @@ def validate_schema(df: pd.DataFrame) -> None:
     if len(df) == 0:
         errors.append("dataframe has zero rows")
 
+    if errors:
+        raise SchemaError("; ".join(errors))
+
+
+def validate_canonical_schema(df: pd.DataFrame) -> None:
+    """Validate core schema plus DS-06 provenance columns required of the canonical table."""
+    validate_schema(df)
+    errors: list[str] = []
+    columns = set(df.columns)
+    missing = sorted(c for c in PROVENANCE_COLUMNS if c not in columns)
+    if missing:
+        errors.append(f"missing canonical provenance columns (DS-06): {missing}")
+    else:
+        if df[SOURCE_FILE_COLUMN].isna().any():
+            errors.append(f"column '{SOURCE_FILE_COLUMN}' contains null values")
+        if df[SOURCE_SPLIT_COLUMN].isna().any():
+            errors.append(f"column '{SOURCE_SPLIT_COLUMN}' contains null values")
+        if df[SAMPLE_INDEX_COLUMN].isna().any():
+            errors.append(f"column '{SAMPLE_INDEX_COLUMN}' contains null values")
+        elif not pd.api.types.is_integer_dtype(df[SAMPLE_INDEX_COLUMN]):
+            if not pd.api.types.is_numeric_dtype(df[SAMPLE_INDEX_COLUMN]):
+                errors.append(f"column '{SAMPLE_INDEX_COLUMN}' must be integer-like")
     if errors:
         raise SchemaError("; ".join(errors))

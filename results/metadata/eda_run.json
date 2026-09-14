@@ -1,0 +1,41 @@
+{
+  "spec": "SPEC-003",
+  "delivery": "A2",
+  "generated_at": "2026-09-14T00:54:53+00:00",
+  "dataset_version": "tep-canonical-v1",
+  "n_rows": 30260,
+  "n_features": 52,
+  "n_classes": 21,
+  "protocol_disclaimer": "Esta EDA é estritamente descritiva. Nenhuma interpretação abaixo modifica o protocolo experimental (unidade = run, isolamento do teste, os 6 modelos obrigatórios, o conjunto de métricas, nem a ordem do pipeline). Sugestões de pré-processamento, se houver, são hipóteses a avaliar em SPEC-005 e não decisões congeladas nesta etapa.",
+  "tables": {
+    "descriptive_global": "/home/alanancy/metodosEsimulacao/results/tables/A2_descriptive_global.csv",
+    "descriptive_by_class": "/home/alanancy/metodosEsimulacao/results/tables/A2_descriptive_by_class.csv",
+    "class_distribution": "/home/alanancy/metodosEsimulacao/results/tables/A2_class_distribution.csv",
+    "variability": "/home/alanancy/metodosEsimulacao/results/tables/A2_variability.csv",
+    "correlation": "/home/alanancy/metodosEsimulacao/results/tables/A2_correlation.csv",
+    "correlation_top_pairs": "/home/alanancy/metodosEsimulacao/results/tables/A2_correlation_top_pairs.csv",
+    "pca_variance": "/home/alanancy/metodosEsimulacao/results/tables/A2_pca_variance.csv",
+    "pca_projection": "/home/alanancy/metodosEsimulacao/results/tables/A2_pca_projection.csv.gz",
+    "normal_vs_fault": "/home/alanancy/metodosEsimulacao/results/tables/A2_normal_vs_fault.csv"
+  },
+  "figures": {
+    "class_samples": "/home/alanancy/metodosEsimulacao/results/figures/A2_class_distribution_samples.png",
+    "class_runs": "/home/alanancy/metodosEsimulacao/results/figures/A2_class_distribution_runs.png",
+    "variability": "/home/alanancy/metodosEsimulacao/results/figures/A2_variable_variability.png",
+    "correlation": "/home/alanancy/metodosEsimulacao/results/figures/A2_correlation_heatmap.png",
+    "pca_regime": "/home/alanancy/metodosEsimulacao/results/figures/A2_pca_normal_vs_fault.png",
+    "pca_class": "/home/alanancy/metodosEsimulacao/results/figures/A2_pca_by_class.png",
+    "pca_variance": "/home/alanancy/metodosEsimulacao/results/figures/A2_pca_explained_variance.png",
+    "normal_vs_fault": "/home/alanancy/metodosEsimulacao/results/figures/A2_normal_vs_fault_mean_shift.png"
+  },
+  "report": "/home/alanancy/metodosEsimulacao/reports/eda/A2_eda_report.md",
+  "observations": "/home/alanancy/metodosEsimulacao/reports/eda/A2_observations.md",
+  "elements_covered": [
+    "descriptive_stats",
+    "class_distribution",
+    "variability",
+    "correlation",
+    "pca",
+    "normal_vs_fault"
+  ]
+}

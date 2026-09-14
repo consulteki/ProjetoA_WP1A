@@ -1,0 +1,23 @@
+class_label,n_samples,meaning,in_normative_set_0_20
+0,1460,Normal operation,True
+1,1440,"IDV(1) A/C Feed Ratio, B Composition Constant (Stream 4) — Step",True
+2,1440,"IDV(2) B Composition, A/C Ratio Constant (Stream 4) — Step",True
+3,1440,IDV(3) D Feed Temperature (Stream 2) — Step,True
+4,1440,IDV(4) Reactor Cooling Water Inlet Temperature — Step,True
+5,1440,IDV(5) Condenser Cooling Water Inlet Temperature — Step,True
+6,1440,IDV(6) A Feed Loss (Stream 1) — Step,True
+7,1440,IDV(7) C Header Pressure Loss (Stream 4) — Step,True
+8,1440,"IDV(8) A, B, C Feed Composition (Stream 4) — Random",True
+9,1440,IDV(9) D Feed Temperature (Stream 2) — Random,True
+10,1440,IDV(10) C Feed Temperature (Stream 4) — Random,True
+11,1440,IDV(11) Reactor Cooling Water Inlet Temperature — Random,True
+12,1440,IDV(12) Condenser Cooling Water Inlet Temperature — Random,True
+13,1440,IDV(13) Reaction Kinetics — Slow Drift,True
+14,1440,IDV(14) Reactor Cooling Water Valve — Sticking,True
+15,1440,IDV(15) Condenser Cooling Water Valve — Sticking,True
+16,1440,IDV(16) Unknown,True
+17,1440,IDV(17) Unknown,True
+18,1440,IDV(18) Unknown,True
+19,1440,IDV(19) Unknown,True
+20,1440,IDV(20) Unknown,True
+21,1440,IDV(21) Valve position constant (Stream 4) — fora do escopo normativo DS-03,False

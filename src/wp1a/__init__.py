@@ -1,21 +1,22 @@
-"""WP1A validation/guard utilities.
+"""WP1A utilities: methodological guards plus pipeline stage modules.
 
-This package does NOT implement the ML pipeline (audit, EDA, split,
-preprocessing, training, evaluation — see skills/*/SKILL.md). It implements
-only the methodological guardrails that the future pipeline implementation
-must satisfy, as fixed by:
+Guardrails (must keep passing ``tests/``) live under ``data/``, ``splitting/``
+and ``tracking/``. Pipeline stages are added incrementally per SPEC-001..009;
+currently implemented:
+
+- ``wp1a.data.audit`` / ``wp1a.data.audit_cli`` — Etapa 1 (Entrega A1)
+- ``wp1a.data.canonical`` / ``wp1a.data.canonical_cli`` — SPEC-002 (dataset canônico)
+- ``wp1a.eda`` / ``wp1a.eda.cli`` — Etapa 2 / SPEC-003 (Entrega A2)
+- ``wp1a.splitting.grouped_split`` / ``wp1a.splitting.cli`` — Etapa 3 / SPEC-004 (Entrega A3)
+- ``wp1a.preprocessing`` / ``wp1a.preprocessing.cli`` — Etapa 4 / SPEC-005 (fit só no treino)
+
+Normative references:
 
 - docs/specs/SPEC-000-master.md
 - docs/adr/ADR-001-run-as-experimental-grouping-unit.md
 - docs/adr/ADR-002-test-set-isolation.md
 - docs/adr/ADR-003-reproducibility-requirements.md
 - AGENTS.md
-
-These guardrails exist so that the test suite in tests/ can reject, by
-construction, the six methodological failure modes requested before any
-pipeline code is written: run leakage, use of the test set during fit,
-class inconsistency, invalid schema, non-reproducible splits, and
-incomplete experiment metadata.
 """
 
 __version__ = "0.1.0"

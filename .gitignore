@@ -24,6 +24,10 @@ data/processed/*
 !data/processed/.gitkeep
 !data/processed/canonical_dataset_registry.json
 !data/processed/NON_CANONICAL.md
+!data/processed/split_manifest_v1.json
+!data/processed/train_runs.csv
+!data/processed/validation_runs.csv
+!data/processed/test_runs.csv
 
 # --- Modelos treinados (binários grandes) ---
 models/*

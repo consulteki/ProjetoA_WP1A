@@ -95,7 +95,8 @@ wp1a-tep-benchmark/
 | Etapa 1 — Auditoria (SPEC-001 / Entrega A1) | ✅ Implementada (`make audit` → `reports/audit/`, `results/metadata/audit_counts.json`) |
 | Dataset canônico (SPEC-002) | ✅ Implementado (`make canonical-dataset` → `data/processed/canonical_dataset_registry.json`, `tep-canonical-v1.csv.gz`) |
 | Etapa 2 — EDA (SPEC-003 / Entrega A2) | ✅ Implementada (`make eda` → `reports/eda/`, `results/figures/A2_*.png`, `results/tables/A2_*.csv`) |
-| Pipeline restante (split → pré-processamento → treino → avaliação) | ⛔ Não implementado — ver `.agents/skills/` e `docs/specs/SPEC-004..007.md` |
+| Etapa 3 — Divisão por run (SPEC-004 / Entrega A3) | ✅ Implementada (`make split` → `data/processed/split_manifest_v1.json`, `train_runs.csv`, `validation_runs.csv`, `test_runs.csv`) |
+| Pipeline restante (pré-processamento → treino → avaliação) | ⛔ Não implementado — ver `.agents/skills/` e `docs/specs/SPEC-005..007.md` |
 | Análise estatística, figuras, manuscrito | ⛔ Não implementado — ver `docs/specs/SPEC-008.md`, `SPEC-009.md` |
 
 ## Como rodar os testes

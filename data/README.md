@@ -9,6 +9,7 @@
   - `tep-canonical-v1.csv.gz` — tabela canônica (gerada; não versionada por volume).
   - `canonical_dataset_registry.json` — registro versionado (identificador, arquivos, tratamentos, checksums).
   - `NON_CANONICAL.md` — política do que não pode alimentar A5–A9.
-  - Também receberá manifestos de divisão (`SPEC-004`) e conjuntos pré-processados (`SPEC-005`).
+  - Também receberá conjuntos pré-processados (`SPEC-005`).
+  - Entrega A3: `split_manifest_v1.json`, `train_runs.csv`, `validation_runs.csv`, `test_runs.csv`.
 
-Nenhum arquivo grande aqui é versionado por padrão (ver `.gitignore`); os `.gitkeep` mantêm a estrutura de pastas no controle de versão. O registro canônico JSON é exceção explícita.
+Nenhum arquivo grande aqui é versionado por padrão (ver `.gitignore`); os `.gitkeep` mantêm a estrutura de pastas no controle de versão. Exceções versionáveis: registro canônico, `NON_CANONICAL.md` e manifesto A3 (`split_manifest_v1.json` + CSVs de runs).

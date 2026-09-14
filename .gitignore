@@ -17,10 +17,13 @@ dist/
 # --- Dados (grandes / gerados — nunca versionar os brutos ou intermediários) ---
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/SOURCE.txt
 data/interim/*
 !data/interim/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/canonical_dataset_registry.json
+!data/processed/NON_CANONICAL.md
 
 # --- Modelos treinados (binários grandes) ---
 models/*

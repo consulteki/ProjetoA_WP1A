@@ -1,0 +1,53 @@
+column,dtype_expected,family,meaning
+xmeas_1,float64,XMEAS,A Feed (stream 1)
+xmeas_2,float64,XMEAS,D Feed (stream 2)
+xmeas_3,float64,XMEAS,E Feed (stream 3)
+xmeas_4,float64,XMEAS,A and C Feed (stream 4)
+xmeas_5,float64,XMEAS,Recycle Flow (stream 8)
+xmeas_6,float64,XMEAS,Reactor Feed Rate (stream 6)
+xmeas_7,float64,XMEAS,Reactor Pressure
+xmeas_8,float64,XMEAS,Reactor Level
+xmeas_9,float64,XMEAS,Reactor Temperature
+xmeas_10,float64,XMEAS,Purge Rate (stream 9)
+xmeas_11,float64,XMEAS,Product Separator Temperature
+xmeas_12,float64,XMEAS,Product Separator Level
+xmeas_13,float64,XMEAS,Product Separator Pressure
+xmeas_14,float64,XMEAS,Product Separator Underflow (stream 10)
+xmeas_15,float64,XMEAS,Stripper Level
+xmeas_16,float64,XMEAS,Stripper Pressure
+xmeas_17,float64,XMEAS,Stripper Underflow (stream 11)
+xmeas_18,float64,XMEAS,Stripper Temperature
+xmeas_19,float64,XMEAS,Stripper Steam Flow
+xmeas_20,float64,XMEAS,Compressor Work
+xmeas_21,float64,XMEAS,Reactor Cooling Water Outlet Temperature
+xmeas_22,float64,XMEAS,Separator Cooling Water Outlet Temperature
+xmeas_23,float64,XMEAS,Component A to Reactor (stream 6) mole fraction
+xmeas_24,float64,XMEAS,Component B to Reactor (stream 6) mole fraction
+xmeas_25,float64,XMEAS,Component C to Reactor (stream 6) mole fraction
+xmeas_26,float64,XMEAS,Component D to Reactor (stream 6) mole fraction
+xmeas_27,float64,XMEAS,Component E to Reactor (stream 6) mole fraction
+xmeas_28,float64,XMEAS,Component F to Reactor (stream 6) mole fraction
+xmeas_29,float64,XMEAS,Component A in Purge (stream 9) mole fraction
+xmeas_30,float64,XMEAS,Component B in Purge (stream 9) mole fraction
+xmeas_31,float64,XMEAS,Component C in Purge (stream 9) mole fraction
+xmeas_32,float64,XMEAS,Component D in Purge (stream 9) mole fraction
+xmeas_33,float64,XMEAS,Component E in Purge (stream 9) mole fraction
+xmeas_34,float64,XMEAS,Component F in Purge (stream 9) mole fraction
+xmeas_35,float64,XMEAS,Component G in Purge (stream 9) mole fraction
+xmeas_36,float64,XMEAS,Component H in Purge (stream 9) mole fraction
+xmeas_37,float64,XMEAS,Component D in Product (stream 11) mole fraction
+xmeas_38,float64,XMEAS,Component E in Product (stream 11) mole fraction
+xmeas_39,float64,XMEAS,Component F in Product (stream 11) mole fraction
+xmeas_40,float64,XMEAS,Component G in Product (stream 11) mole fraction
+xmeas_41,float64,XMEAS,Component H in Product (stream 11) mole fraction
+xmv_1,float64,XMV,D Feed Flow (stream 2)
+xmv_2,float64,XMV,E Feed Flow (stream 3)
+xmv_3,float64,XMV,A Feed Flow (stream 1)
+xmv_4,float64,XMV,A and C Feed Flow (stream 4)
+xmv_5,float64,XMV,Compressor Recycle Valve
+xmv_6,float64,XMV,Purge Valve (stream 9)
+xmv_7,float64,XMV,Separator Pot Liquid Flow (stream 10)
+xmv_8,float64,XMV,Stripper Liquid Product Flow (stream 11)
+xmv_9,float64,XMV,Stripper Steam Valve
+xmv_10,float64,XMV,Reactor Cooling Water Flow
+xmv_11,float64,XMV,Condenser Cooling Water Flow

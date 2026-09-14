@@ -10,6 +10,7 @@ Cada ADR é derivada exclusivamente de `docs/specs/SPEC-000-master.md`, de `docs
 | [ADR-002](./ADR-002-test-set-isolation.md) | Isolamento do conjunto de teste | O teste só é consultado uma vez, após o congelamento da configuração; nenhuma transformação ou seleção de hiperparâmetro pode usá-lo. |
 | [ADR-003](./ADR-003-reproducibility.md) | Requisitos de reprodutibilidade | Semente, manifesto de divisão, versões de software, hiperparâmetros e resultados brutos são sempre registrados e versionados. |
 | [ADR-004](./ADR-004-canonical-dataset.md) | Dataset canônico | Existe uma única fonte de dados oficial (documentada em A1); versões/subconjuntos alternativos não alimentam resultados finais. |
+| [ADR-004-amendment-001](./ADR-004-amendment-001-canonical-freeze.md) | Congelamento `tep-canonical-v1` | Exclui classe 21, orienta `d00.dat` em memória, mantém duplicatas pré-falha; registro em `data/processed/`. |
 | [ADR-005](./ADR-005-experiment-configuration.md) | Configuração de experimentos | Toda execução é definida por uma configuração explícita e versionada em `configs/`, com identificador único de experimento. |
 | [ADR-006](./ADR-006-model-family-selection.md) | Seleção da família de modelos do benchmark | O benchmark compreende exatamente 6 modelos clássicos fixos, sob o mesmo protocolo. |
 | [ADR-007](./ADR-007-multi-criteria-model-evaluation.md) | Avaliação multicritério dos modelos | Nenhum "melhor modelo" é declarado com base apenas em acurácia; custo computacional é sempre considerado. |

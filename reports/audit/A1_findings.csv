@@ -1,0 +1,9 @@
+item,title,status,summary
+1,Arquivos disponíveis,ok,"44 arquivo(s) .dat encontrados em /home/alanancy/metodosEsimulacao/data/raw; nome, formato, tamanho e sha256 registrados."
+2,Quantidade de linhas e colunas por arquivo,anomaly,"1 arquivo(s) com forma divergente do esperado (treino 480×52, teste 960×52): d00.dat=52x500 (features_x_samples)"
+3,"Nomes, tipos e significado das variáveis",ok,Catálogo de 52 variáveis canônicas (xmeas_1..41 + xmv_1..11) documentado; dtype observado nos .dat = float64.
+4,Distribuição das 21 classes,divergence,"Divergência frente a DS-03 (21 classes = 0..20). classes além do normativo DS-03 (0..20): [21] (arquivos d21* presentes no pacote Braatz). Classes observadas: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]."
+5,Quantidade de execuções (run) por classe,ok,"44 run_id distintos (1 arquivo = 1 execução Braatz); contagem por classe registrada. Nota: os rótulos braatz_train/braatz_test são proveniência do pacote original, NÃO a divisão experimental WP1A (SPEC-004)."
+6,"Valores ausentes, infinitos ou inconsistentes",ok,"nenhum problema encontrado — zero NaN, zero Inf; todas as matrizes orientadas têm 52 colunas de processo."
+7,Possíveis duplicações (intra e entre arquivos),anomaly,"grupos de linhas idênticas presentes em ≥2 arquivos: 160; nota: no pacote Braatz, arquivos *_te.dat tipicamente compartilham o trecho inicial em operação normal (pré-introdução da falha); isso é um achado de auditoria a decidir em SPEC-002, não uma correção silenciosa nesta etapa"
+8,"Relação entre arquivos, classes e identificadores de execução (run_id)",ok,nenhum problema encontrado — cada run_id mapeia a exatamente uma classe e a exatamente um arquivo de origem; verificação automatizada executada.

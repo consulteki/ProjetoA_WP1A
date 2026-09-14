@@ -92,7 +92,9 @@ wp1a-tep-benchmark/
 | Governança (specs, ADRs, skills, AGENTS.md) | ✅ Completa |
 | Guardas de validação (`src/wp1a/`) | ✅ Implementados (schema, run leakage, isolamento de teste, consistência de classes, reprodutibilidade de split, completude de metadados) |
 | Testes de rejeição (`tests/unit/`, `tests/methodology/`) | ✅ Implementados e passando |
-| Pipeline de ML (auditoria → EDA → split → pré-processamento → treino → avaliação) | ⛔ Não implementado — ver `.agents/skills/` e `docs/specs/SPEC-001..007.md` |
+| Etapa 1 — Auditoria (SPEC-001 / Entrega A1) | ✅ Implementada (`make audit` → `reports/audit/`, `results/metadata/audit_counts.json`) |
+| Dataset canônico (SPEC-002) | ✅ Implementado (`make canonical-dataset` → `data/processed/canonical_dataset_registry.json`, `tep-canonical-v1.csv.gz`) |
+| Pipeline restante (EDA → split → pré-processamento → treino → avaliação) | ⛔ Não implementado — ver `.agents/skills/` e `docs/specs/SPEC-003..007.md` |
 | Análise estatística, figuras, manuscrito | ⛔ Não implementado — ver `docs/specs/SPEC-008.md`, `SPEC-009.md` |
 
 ## Como rodar os testes

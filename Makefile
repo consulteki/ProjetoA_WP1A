@@ -34,20 +34,14 @@ test-methodology:
 	$(PYTHON) -m pytest tests/methodology
 
 # --- Etapas do pipeline -------------------------------------------------
-# Nenhuma etapa abaixo esta implementada ainda (AGENTS.md workflow: os
-# testes de rejeicao em tests/methodology e tests/unit vem antes da
-# implementacao do pipeline). Cada alvo aponta para a skill e a SPEC que
-# devem ser seguidas ao implementa-lo. Substitua o corpo do alvo pela
-# chamada real (ex.: `$(PYTHON) -m wp1a.data.audit_cli`) quando o modulo
-# correspondente existir em src/wp1a/.
-
+# Cada alvo aponta para a skill/SPEC correspondente. SPEC-001 (audit) e
+# SPEC-002 (canonical-dataset) já estão implementadas; as demais
+# permanecem a implementar conforme docs/specs/SPEC-003..009.md.
 audit:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-001-data-audit.md e .agents/skills/data-audit/SKILL.md"
+	$(PYTHON) -m wp1a.data.audit_cli
 
 canonical-dataset:
-	@echo "TODO: nao implementado ainda."
-	@echo "Siga docs/specs/SPEC-002-canonical-dataset.md e .agents/skills/canonical-dataset/SKILL.md"
+	$(PYTHON) -m wp1a.data.canonical_cli
 
 eda:
 	@echo "TODO: nao implementado ainda."

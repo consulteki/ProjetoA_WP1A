@@ -60,3 +60,11 @@ class IncompleteMetadataError(WP1AValidationError):
 
     See docs/adr/ADR-003-reproducibility-requirements.md, REP-01..REP-06.
     """
+
+
+class CanonicalDatasetError(WP1AValidationError):
+    """Canonical dataset registry or table is inconsistent with SPEC-002 / ADR-004.
+
+    See docs/specs/SPEC-002-canonical-dataset.md,
+    docs/adr/ADR-004-canonical-dataset.md.
+    """

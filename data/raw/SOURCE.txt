@@ -1,0 +1,13 @@
+"""Proveniência dos arquivos brutos em ``data/raw/``.
+
+Os arquivos ``dXX.dat`` / ``dXX_te.dat`` (XX = 00..21) são a referência
+pública de Russell/Chiang/Braatz do Tennessee Eastman Process, obtidos de:
+
+https://github.com/jkitchin/tennessee-eastman-profbraatz/tree/master/data
+
+Checksums SHA-256 e formas observadas estão em
+``results/metadata/audit_counts.json`` e ``reports/audit/`` (Entrega A1).
+
+Estes arquivos NÃO são versionados no git (ver ``.gitignore``); devem ser
+repostos localmente antes de ``make audit``.
+"""

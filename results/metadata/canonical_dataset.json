@@ -1,0 +1,59 @@
+{
+  "dataset_version": "tep-canonical-v1",
+  "frozen_at": "2026-09-14T00:47:29+00:00",
+  "counts": {
+    "n_rows": 30260,
+    "n_runs": 42,
+    "n_classes": 21,
+    "n_features": 52,
+    "class_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "artifacts": {
+    "table": "data/processed/tep-canonical-v1.csv.gz",
+    "table_sha256": "c6ec30e9666aff5e945ed9ce282bc73e86bcb8a1167ef330f650834ab48fddc9",
+    "content_sha256": "86a28d77c2acd0f17d51d1e2f798130b9c521860ec3ce78ff5b3542a6ba2c80e",
+    "registry": "data/processed/canonical_dataset_registry.json"
+  },
+  "treatments": [
+    {
+      "id": "exclude_fault_21",
+      "decision": "exclude",
+      "a1_item": "4",
+      "summary": "Excluir d21.dat e d21_te.dat (classe 21) para alinhar ao DS-03 (21 classes = rótulos 0..20)."
+    },
+    {
+      "id": "orient_to_samples_x_features",
+      "decision": "orient_in_memory_only",
+      "a1_item": "2",
+      "summary": "Orientar matrizes features×samples (notadamente d00.dat 52×500) para samples×features apenas na representação canônica; data/raw/ permanece inalterado. Conservar as 500 amostras de d00.dat (não truncar para 480)."
+    },
+    {
+      "id": "retain_cross_file_duplicate_rows",
+      "decision": "retain",
+      "a1_item": "7",
+      "summary": "Manter linhas numericamente idênticas compartilhadas entre arquivos *_te.dat (trecho pré-falha em regime normal). Removê-las alteraria o comprimento e a estrutura temporal das execuções."
+    }
+  ]
+}

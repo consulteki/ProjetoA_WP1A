@@ -1,0 +1,16 @@
+\begin{table}
+\caption{Frozen hyperparameters}
+\label{tab:A6_exp-a4-v2__02_hyperparameters}
+\begin{tabular}{lllllllllllllllll}
+\toprule
+model\_id & mod\_code & experiment\_id & param\_\_C & param\_\_max\_iter & param\_\_solver & param\_\_criterion & param\_\_max\_depth & param\_\_min\_samples\_leaf & param\_\_n\_estimators & param\_\_n\_jobs & param\_\_learning\_rate & param\_\_cache\_size & param\_\_kernel & param\_\_reg\_lambda & param\_\_tree\_method & param\_\_device \\
+\midrule
+logistic\_regression & MOD-1 & exp-a4-v2\_\_logistic\_regression & 10.000000 & 1000.000000 & lbfgs &  &  &  &  &  &  &  &  &  &  &  \\
+decision\_tree & MOD-2 & exp-a4-v2\_\_decision\_tree &  &  &  & gini & 20.000000 & 5.000000 &  &  &  &  &  &  &  &  \\
+random\_forest & MOD-3 & exp-a4-v2\_\_random\_forest &  &  &  &  & 20.000000 & 1.000000 & 200.000000 & -1.000000 &  &  &  &  &  &  \\
+gradient\_boosting & MOD-4 & exp-a4-v2\_\_gradient\_boosting &  &  &  &  & 3.000000 &  & 50.000000 &  & 0.100000 &  &  &  &  &  \\
+svm & MOD-5 & exp-a4-v2\_\_svm & 10.000000 &  &  &  &  &  &  &  &  & 500.000000 & linear &  &  &  \\
+xgboost & MOD-6 & exp-a4-v2\_\_xgboost &  &  &  &  & 6.000000 &  & 100.000000 & -1.000000 & 0.100000 &  &  & 1.000000 & hist & cpu \\
+\bottomrule
+\end{tabular}
+\end{table}

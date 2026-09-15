@@ -97,8 +97,19 @@ wp1a-tep-benchmark/
 | Etapa 2 — EDA (SPEC-003 / Entrega A2) | ✅ Implementada (`make eda` → `reports/eda/`, `results/figures/A2_*.png`, `results/tables/A2_*.csv`) |
 | Etapa 3 — Divisão por run (SPEC-004 / Entrega A3) | ✅ Implementada (`make split` → `data/processed/split_manifest_v1.json`, `train_runs.csv`, `validation_runs.csv`, `test_runs.csv`) |
 | Etapa 4 — Pré-processamento (SPEC-005) | ✅ Implementada (`make preprocess` → `preprocessor_v1_*.csv.gz`, `preprocessor_v1_scaler_params.json`; fit só no treino) |
-| Pipeline restante (treino → avaliação) | ⛔ Não implementado — ver `.agents/skills/` e `docs/specs/SPEC-006..007.md` |
-| Análise estatística, figuras, manuscrito | ⛔ Não implementado — ver `docs/specs/SPEC-008.md`, `SPEC-009.md` |
+| Framework de experimento | ✅ `ExperimentRunner` (`src/wp1a/experiment/`) — caminho único para todos os classificadores (INV-03) |
+| Adapters dos 6 modelos (MOD-1..MOD-6) | ✅ `src/wp1a/models/adapters.py` — factories + `ClassifierProtocol`; treino completo (seleção/grid A4) ainda pendente |
+| Dry-run ponta a ponta | ✅ `make dry-run` — fração controlada de `run_id`s; artefatos em `results/dry_run/` marcados **DRY-RUN** (`scientific_validity: false`); **não** usar em conclusões |
+| Etapa 5 — Treino A4 (SPEC-006) | ✅ `make train` — 6 modelos via `ExperimentRunner`; loga seed, git SHA, environment, parameters, time, metrics, model size (`exp-a4-v2`) |
+| Tuning de hiperparâmetros (SPEC-006A) | ⛔ Só após baseline A4 — ver `docs/specs/SPEC-006A-hyperparameter-search.md` |
+| Etapa 6 — Avaliação A5 (SPEC-007) | ✅ `make evaluate` — recomputa MET-01..09 a partir das predições; anexa MET-10..12; verifica F1/BA (CA-06); classes confundidas (QP3); sem ranking único (INV-06) |
+| Entrega A6 — Figuras/tabelas | ✅ `make figures` — insumos 1–8 a partir **somente** de `results/` (nunca `data/raw`); saída em `results/figures|tables/` e `article/` |
+| Entrega A7 — Relatório técnico | ✅ `reports/technical/A7_technical_report.md` (+ PDF); QP1–QP5 / H1–H4; ameaças §14; experimento `exp-a4-v2` |
+| Entrega A8 — Manuscrito científico | ✅ `article/manuscript/manuscript.tex` (+ PDF); 10 seções SPEC-000 §11.4; figuras A6 |
+| SPEC-008 — Estatística formal | ✅ `make statistics` — Friedman/Wilcoxon; unidade=`run_id`; artefatos `results/tables/A8_*` |
+| Entrega A9 — Apresentação | ✅ `presentation/A9_presentation.pdf` (Beamer; síntese A7/A8) |
+| Release | ✅ **v1.0.0** — `CHANGELOG.md`, `docs/releases/v1.0.0.md`; `make reproduce` |
+| Pipeline restante | ✅ Entregas A1–A9 cobertas para `exp-a4-v2` (riscos AR-1–AR-5 aceitos) |
 
 ## Como rodar os testes
 
@@ -107,6 +118,7 @@ pip install -r requirements.txt
 make test              # toda a suite
 make test-unit         # apenas tests/unit
 make test-methodology  # apenas tests/methodology (anti-leakage, isolamento de teste, reprodutibilidade, metadata)
+make dry-run           # smoke ponta a ponta em fração de runs (NÃO científico; ver results/dry_run/)
 ```
 
 ## Regras não negociáveis (resumo — ver AGENTS.md para o texto completo)

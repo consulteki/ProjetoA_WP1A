@@ -1,0 +1,145 @@
+[
+  {
+    "hypothesis": "H1",
+    "friedman_reject_h0": true,
+    "correction_family": "holm_within_hypothesis",
+    "n_planned_pairs": 3,
+    "run_accuracy_wilcoxon": "all planned pairs significant (Holm within H)",
+    "verdict_run_level": "corroborated",
+    "pairs": [
+      {
+        "model_a": "random_forest",
+        "model_b": "logistic_regression",
+        "metric": "run_accuracy",
+        "experimental_unit": "run_id",
+        "n_units": 11,
+        "n_nonzero_diffs": 11,
+        "mean_diff_a_minus_b": 0.32215909090909095,
+        "statistic": 10.0,
+        "pvalue_raw": 0.0419921875,
+        "note": "",
+        "pvalue_holm": 0.0419921875,
+        "alpha": 0.05,
+        "significant_holm": true,
+        "correction": "holm"
+      },
+      {
+        "model_a": "gradient_boosting",
+        "model_b": "logistic_regression",
+        "metric": "run_accuracy",
+        "experimental_unit": "run_id",
+        "n_units": 11,
+        "n_nonzero_diffs": 11,
+        "mean_diff_a_minus_b": 0.3006628787878788,
+        "statistic": 6.0,
+        "pvalue_raw": 0.013671875,
+        "note": "",
+        "pvalue_holm": 0.041015625,
+        "alpha": 0.05,
+        "significant_holm": true,
+        "correction": "holm"
+      },
+      {
+        "model_a": "xgboost",
+        "model_b": "logistic_regression",
+        "metric": "run_accuracy",
+        "experimental_unit": "run_id",
+        "n_units": 11,
+        "n_nonzero_diffs": 11,
+        "mean_diff_a_minus_b": 0.3170454545454545,
+        "statistic": 7.0,
+        "pvalue_raw": 0.0185546875,
+        "note": "",
+        "pvalue_holm": 0.041015625,
+        "alpha": 0.05,
+        "significant_holm": true,
+        "correction": "holm"
+      }
+    ]
+  },
+  {
+    "hypothesis": "H2",
+    "friedman_reject_h0": true,
+    "correction_family": "holm_within_hypothesis",
+    "n_planned_pairs": 4,
+    "run_accuracy_wilcoxon": "not all planned pairs significant (Holm within H)",
+    "verdict_run_level": "not_corroborated_by_wilcoxon",
+    "pairs": [
+      {
+        "model_a": "random_forest",
+        "model_b": "logistic_regression",
+        "metric": "run_accuracy",
+        "experimental_unit": "run_id",
+        "n_units": 11,
+        "n_nonzero_diffs": 11,
+        "mean_diff_a_minus_b": 0.32215909090909095,
+        "statistic": 10.0,
+        "pvalue_raw": 0.0419921875,
+        "note": "",
+        "pvalue_holm": 0.1259765625,
+        "alpha": 0.05,
+        "significant_holm": false,
+        "correction": "holm"
+      },
+      {
+        "model_a": "random_forest",
+        "model_b": "decision_tree",
+        "metric": "run_accuracy",
+        "experimental_unit": "run_id",
+        "n_units": 11,
+        "n_nonzero_diffs": 11,
+        "mean_diff_a_minus_b": 0.056344696969696975,
+        "statistic": 13.0,
+        "pvalue_raw": 0.0830078125,
+        "note": "",
+        "pvalue_holm": 0.1259765625,
+        "alpha": 0.05,
+        "significant_holm": false,
+        "correction": "holm"
+      },
+      {
+        "model_a": "xgboost",
+        "model_b": "logistic_regression",
+        "metric": "run_accuracy",
+        "experimental_unit": "run_id",
+        "n_units": 11,
+        "n_nonzero_diffs": 11,
+        "mean_diff_a_minus_b": 0.3170454545454545,
+        "statistic": 7.0,
+        "pvalue_raw": 0.0185546875,
+        "note": "",
+        "pvalue_holm": 0.07421875,
+        "alpha": 0.05,
+        "significant_holm": false,
+        "correction": "holm"
+      },
+      {
+        "model_a": "xgboost",
+        "model_b": "decision_tree",
+        "metric": "run_accuracy",
+        "experimental_unit": "run_id",
+        "n_units": 11,
+        "n_nonzero_diffs": 11,
+        "mean_diff_a_minus_b": 0.0512310606060606,
+        "statistic": 11.0,
+        "pvalue_raw": 0.0537109375,
+        "note": "",
+        "pvalue_holm": 0.1259765625,
+        "alpha": 0.05,
+        "significant_holm": false,
+        "correction": "holm"
+      }
+    ]
+  },
+  {
+    "hypothesis": "H3",
+    "note": "H3 uses cost + per-class F1 criteria (SPEC-000 \u00a74); run-level accuracy Wilcoxon is not the primary test for H3.",
+    "verdict_run_level": "not_applicable_primary"
+  },
+  {
+    "hypothesis": "H4",
+    "note": "H4 compares leaders across Acc/F1/MCC/inference cost on global holdout metrics; not a single Wilcoxon contrast.",
+    "verdict_run_level": "not_applicable_primary",
+    "global_metrics_ref": "provided"
+  }
+]

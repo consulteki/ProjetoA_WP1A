@@ -1,0 +1,68 @@
+# Experimento A4 — treino dos 6 modelos (SPEC-006 / ADR-005).
+#
+# exp-a4-v2: substitui exp-a4-v1 (abortado durante seleção do Gradient Boosting
+# por custo de wall-clock no grid 8-candidatos). Mesmo manifesto A3 e mesmo
+# preprocessor_v1 (INV-03). Novo experiment_id conforme EXP-R04.
+
+experiment_id: exp-a4-v2
+
+dataset:
+  canonical_dataset_id: tep-canonical-v1
+  registry_path: data/processed/canonical_dataset_registry.json
+
+split:
+  manifest_path: data/processed/split_manifest_v1.json
+  seed_ref: configs/seeds.yaml#per_stage.split
+
+preprocessing:
+  version: preprocessor_v1
+  fitted_on: train
+
+seed_ref: configs/seeds.yaml#per_stage.model_init
+
+model_ids:
+  - logistic_regression
+  - decision_tree
+  - random_forest
+  - gradient_boosting
+  - svm
+  - xgboost
+
+# Espaço de busca desta rodada (treino/val). GB reduzido vs models.yaml
+# template por custo (sklearn GradientBoosting multiclasse é sequencial).
+# SVM: kernel linear nesta v2; rbf permanece no template para rodadas futuras.
+search_spaces:
+  logistic_regression:
+    C: [0.1, 1.0, 10.0]
+    max_iter: [1000]
+    solver: ["lbfgs"]
+
+  decision_tree:
+    max_depth: [5, 10, 20]
+    min_samples_leaf: [1, 5]
+    criterion: ["gini"]
+
+  random_forest:
+    n_estimators: [100, 200]
+    max_depth: [10, 20]
+    min_samples_leaf: [1]
+    n_jobs: [-1]
+
+  gradient_boosting:
+    n_estimators: [50]
+    learning_rate: [0.1]
+    max_depth: [2, 3]
+
+  svm:
+    C: [0.1, 1.0, 10.0]
+    kernel: ["linear"]
+    cache_size: [500]
+
+  xgboost:
+    n_estimators: [100, 200]
+    learning_rate: [0.05, 0.1]
+    max_depth: [3, 6]
+    reg_lambda: [1.0]
+    tree_method: ["hist"]
+    device: ["cpu"]
+    n_jobs: [-1]

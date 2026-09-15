@@ -1,0 +1,5 @@
+model_a,model_b,metric,experimental_unit,n_units,n_nonzero_diffs,mean_diff_a_minus_b,statistic,pvalue_raw,note,pvalue_holm,alpha,significant_holm,correction
+random_forest,logistic_regression,run_accuracy,run_id,11,11,0.32215909090909095,10.0,0.0419921875,,0.1259765625,0.05,False,holm
+random_forest,decision_tree,run_accuracy,run_id,11,11,0.056344696969696975,13.0,0.0830078125,,0.1259765625,0.05,False,holm
+xgboost,logistic_regression,run_accuracy,run_id,11,11,0.3170454545454545,7.0,0.0185546875,,0.07421875,0.05,False,holm
+xgboost,decision_tree,run_accuracy,run_id,11,11,0.0512310606060606,11.0,0.0537109375,,0.1259765625,0.05,False,holm

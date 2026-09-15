@@ -35,21 +35,41 @@ data/processed/*
 models/*
 !models/.gitkeep
 
-# --- Resultados gerados (mantenha apenas via processo de release, não commit direto de tudo) ---
+# --- Resultados gerados ---
 results/raw/*
 !results/raw/.gitkeep
 results/predictions/*
 !results/predictions/.gitkeep
+# Predições do experimento oficial v1.0 (permitem `make reproduce` sem retreino)
+!results/predictions/exp-a4-v2__*
+results/dry_run/*
+!results/dry_run/.gitkeep
+!results/dry_run/DRY_RUN_README.md
 
 # Métricas, tabelas, figuras e metadados costumam ser pequenos e valem a
-# pena versionar para auditoria (docs/protocols/reproducibility_protocol.md);
-# ajuste as duas linhas abaixo se o volume crescer demais.
+# pena versionar para auditoria (docs/protocols/reproducibility_protocol.md).
 # results/metrics/*
 # results/tables/*
 # results/figures/*
 # results/metadata/*
 
 # --- Notebooks: remova outputs pesados antes de commitar quando possível ---
+
+# --- LaTeX (artefatos de compilação; versionar .tex/.bib/.pdf) ---
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
 
 # --- OS / editor ---
 .DS_Store

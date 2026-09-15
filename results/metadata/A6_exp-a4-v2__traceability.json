@@ -1,0 +1,107 @@
+{
+  "artifacts": {
+    "01_characterization_figure": "/home/alanancy/metodosEsimulacao/results/figures/A6_exp-a4-v2__01_dataset_characterization.png",
+    "01_characterization_table": "/home/alanancy/metodosEsimulacao/results/tables/A6_exp-a4-v2__01_dataset_characterization.csv",
+    "02_hyperparameters": "/home/alanancy/metodosEsimulacao/results/tables/A6_exp-a4-v2__02_hyperparameters.csv",
+    "03_global_metrics": "/home/alanancy/metodosEsimulacao/results/tables/A6_exp-a4-v2__03_global_metrics.csv",
+    "04_per_class_metrics": "/home/alanancy/metodosEsimulacao/results/tables/A6_exp-a4-v2__04_per_class_metrics.csv",
+    "05_cm_decision_tree": "/home/alanancy/metodosEsimulacao/results/figures/A6_exp-a4-v2__05_cm__decision_tree.png",
+    "05_cm_gradient_boosting": "/home/alanancy/metodosEsimulacao/results/figures/A6_exp-a4-v2__05_cm__gradient_boosting.png",
+    "05_cm_logistic_regression": "/home/alanancy/metodosEsimulacao/results/figures/A6_exp-a4-v2__05_cm__logistic_regression.png",
+    "05_cm_random_forest": "/home/alanancy/metodosEsimulacao/results/figures/A6_exp-a4-v2__05_cm__random_forest.png",
+    "05_cm_svm": "/home/alanancy/metodosEsimulacao/results/figures/A6_exp-a4-v2__05_cm__svm.png",
+    "05_cm_xgboost": "/home/alanancy/metodosEsimulacao/results/figures/A6_exp-a4-v2__05_cm__xgboost.png",
+    "06_f1_mcc": "/home/alanancy/metodosEsimulacao/results/figures/A6_exp-a4-v2__06_f1_mcc.png",
+    "07_computational_cost": "/home/alanancy/metodosEsimulacao/results/figures/A6_exp-a4-v2__07_computational_cost.png",
+    "08_confused_faults": "/home/alanancy/metodosEsimulacao/results/figures/A6_exp-a4-v2__08_per_class_f1_heatmap.png",
+    "08_confused_pairs": "/home/alanancy/metodosEsimulacao/results/figures/A6_exp-a4-v2__08_confused_pairs.png"
+  },
+  "created_at": "2026-09-14T05:47:12+00:00",
+  "delivery": "A6",
+  "disclaimer": "A6 figures/tables are derived only from versioned files under results/. No data/raw access. Multicriteria view (INV-06/INV-07); no single-metric winner.",
+  "experiment_id": "exp-a4-v2",
+  "forbidden": [
+    "data/raw",
+    "data/interim"
+  ],
+  "n_models": 6,
+  "results_only": true,
+  "spec": "SPEC-009 \u00a73.1 / scientific-figures",
+  "traceability": [
+    {
+      "artifact": "results/tables/A6_exp-a4-v2__01_dataset_characterization.csv",
+      "item": "01_characterization_table",
+      "sources": "results/tables/A1_dataset_characterization.csv,results/metadata/canonical_dataset.json,results/metadata/audit_counts.json"
+    },
+    {
+      "artifact": "results/figures/A6_exp-a4-v2__01_dataset_characterization.png",
+      "item": "01_characterization_figure",
+      "sources": "results/tables/A1_dataset_characterization.csv"
+    },
+    {
+      "artifact": "results/tables/A6_exp-a4-v2__02_hyperparameters.csv",
+      "item": "02_hyperparameters",
+      "sources": "results/tables/exp-a4-v2__hyperparameters.csv"
+    },
+    {
+      "artifact": "results/tables/A6_exp-a4-v2__03_global_metrics.csv",
+      "item": "03_global_metrics",
+      "sources": "results/tables/A5_exp-a4-v2__global_metrics.csv"
+    },
+    {
+      "artifact": "results/tables/A6_exp-a4-v2__04_per_class_metrics.csv",
+      "item": "04_per_class_metrics",
+      "sources": "results/tables/A5_exp-a4-v2__per_class_metrics.csv"
+    },
+    {
+      "artifact": "results/figures/A6_exp-a4-v2__05_cm__logistic_regression.png",
+      "item": "05_cm_logistic_regression",
+      "sources": "results/tables/A5_exp-a4-v2__logistic_regression__confusion_matrix.csv"
+    },
+    {
+      "artifact": "results/figures/A6_exp-a4-v2__05_cm__decision_tree.png",
+      "item": "05_cm_decision_tree",
+      "sources": "results/tables/A5_exp-a4-v2__decision_tree__confusion_matrix.csv"
+    },
+    {
+      "artifact": "results/figures/A6_exp-a4-v2__05_cm__random_forest.png",
+      "item": "05_cm_random_forest",
+      "sources": "results/tables/A5_exp-a4-v2__random_forest__confusion_matrix.csv"
+    },
+    {
+      "artifact": "results/figures/A6_exp-a4-v2__05_cm__gradient_boosting.png",
+      "item": "05_cm_gradient_boosting",
+      "sources": "results/tables/A5_exp-a4-v2__gradient_boosting__confusion_matrix.csv"
+    },
+    {
+      "artifact": "results/figures/A6_exp-a4-v2__05_cm__svm.png",
+      "item": "05_cm_svm",
+      "sources": "results/tables/A5_exp-a4-v2__svm__confusion_matrix.csv"
+    },
+    {
+      "artifact": "results/figures/A6_exp-a4-v2__05_cm__xgboost.png",
+      "item": "05_cm_xgboost",
+      "sources": "results/tables/A5_exp-a4-v2__xgboost__confusion_matrix.csv"
+    },
+    {
+      "artifact": "results/figures/A6_exp-a4-v2__06_f1_mcc.png",
+      "item": "06_f1_mcc",
+      "sources": "results/tables/A5_exp-a4-v2__global_metrics.csv"
+    },
+    {
+      "artifact": "results/figures/A6_exp-a4-v2__07_computational_cost.png",
+      "item": "07_computational_cost",
+      "sources": "results/tables/A5_exp-a4-v2__cost_metrics.csv"
+    },
+    {
+      "artifact": "results/figures/A6_exp-a4-v2__08_per_class_f1_heatmap.png",
+      "item": "08_confused_faults",
+      "sources": "results/tables/A5_exp-a4-v2__per_class_metrics.csv,results/tables/A5_exp-a4-v2__qp3_confused_faults.json"
+    },
+    {
+      "artifact": "results/figures/A6_exp-a4-v2__08_confused_pairs.png",
+      "item": "08_confused_pairs",
+      "sources": "results/tables/A5_exp-a4-v2__qp3_confused_faults.json"
+    }
+  ]
+}
